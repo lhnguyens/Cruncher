@@ -374,44 +374,93 @@ Terms of Service and Privacy Policy</string>
         <!--Feed-->
         <scene sceneID="RE3-K8-hU0">
             <objects>
-                <viewController id="IT7-32-OKh" sceneMemberID="viewController">
+                <viewController id="IT7-32-OKh" customClass="FeedViewController" customModule="Cruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KWw-dj-j6X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-4T-B6G">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="snB-Rw-eo6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="342" id="nqy-tf-liB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="342"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="316" id="ayV-SQ-cJu" customClass="FeedCell" customModule="Cruncher" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="316"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nqy-tf-liB" id="11U-tq-N7O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="341.66666666666669"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayV-SQ-cJu" id="1fb-hR-lyM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-xR-Ebs">
-                                                    <rect key="frame" x="15" y="56" width="345" height="256"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.40470406599999997" green="0.7508140016" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzD-9p-0Go" customClass="DesignableView" customModule="Spring">
+                                                    <rect key="frame" x="9" y="11" width="356" height="294"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w20-lr-OpW">
+                                                            <rect key="frame" x="20" y="27" width="141" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="A1r-YF-hHX"/>
+                                                                <constraint firstAttribute="width" secondItem="w20-lr-OpW" secondAttribute="height" multiplier="47:7" id="S9S-nM-fbD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-jO-W8l" customClass="DesignableImageView" customModule="Spring">
+                                                            <rect key="frame" x="52" y="83" width="240" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="w20-lr-OpW" firstAttribute="top" secondItem="DzD-9p-0Go" secondAttribute="top" constant="27" id="NAY-1Y-w3i"/>
+                                                        <constraint firstItem="w20-lr-OpW" firstAttribute="leading" secondItem="DzD-9p-0Go" secondAttribute="leading" constant="20" id="ZiT-vA-D4Z"/>
+                                                        <constraint firstAttribute="width" constant="356" id="beQ-fw-UH2"/>
+                                                        <constraint firstAttribute="width" secondItem="DzD-9p-0Go" secondAttribute="height" multiplier="305:254" constant="2.9685039370078243" id="nZ8-EP-Idr"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DzD-9p-0Go" firstAttribute="top" secondItem="1fb-hR-lyM" secondAttribute="topMargin" id="28B-xF-Fgq"/>
+                                                <constraint firstItem="DzD-9p-0Go" firstAttribute="leading" secondItem="1fb-hR-lyM" secondAttribute="leadingMargin" constant="-6" id="DKd-AI-Lf9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DzD-9p-0Go" secondAttribute="bottom" id="R18-sH-Q72"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DzD-9p-0Go" secondAttribute="trailing" constant="-5" id="ktg-ML-k2y"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.21587940859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.40470406599999997" green="0.7508140016" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="userNameInFeedLabel" destination="w20-lr-OpW" id="nDV-iw-ryk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="m5C-4T-B6G" firstAttribute="bottom" secondItem="ZLH-MO-yPg" secondAttribute="bottom" id="4rp-kK-BSW"/>
-                            <constraint firstItem="m5C-4T-B6G" firstAttribute="trailing" secondItem="ZLH-MO-yPg" secondAttribute="trailing" id="C82-Hg-PMm"/>
-                            <constraint firstItem="m5C-4T-B6G" firstAttribute="top" secondItem="ZLH-MO-yPg" secondAttribute="top" id="PXi-Uf-wwH"/>
-                            <constraint firstItem="m5C-4T-B6G" firstAttribute="leading" secondItem="ZLH-MO-yPg" secondAttribute="leading" id="Wsh-KM-0Hh"/>
+                            <constraint firstItem="snB-Rw-eo6" firstAttribute="top" secondItem="ZLH-MO-yPg" secondAttribute="top" id="OKW-XU-42A"/>
+                            <constraint firstItem="snB-Rw-eo6" firstAttribute="leading" secondItem="ZLH-MO-yPg" secondAttribute="leading" id="RtY-3n-ZjU"/>
+                            <constraint firstItem="snB-Rw-eo6" firstAttribute="trailing" secondItem="ZLH-MO-yPg" secondAttribute="trailing" id="UHN-6V-yrZ"/>
+                            <constraint firstItem="snB-Rw-eo6" firstAttribute="bottom" secondItem="ZLH-MO-yPg" secondAttribute="bottom" id="YCW-jw-Ohj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZLH-MO-yPg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="9iv-h9-3QI"/>
+                    <connections>
+                        <outlet property="tableView" destination="snB-Rw-eo6" id="zuo-qv-GX7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcj-fD-jB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
