@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F448C9D222721F200D3B697 /* 4052-smoothymon-typing.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F448C9C222721F200D3B697 /* 4052-smoothymon-typing.json */; };
 		0F99D6332225A58900135B00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F99D6322225A58900135B00 /* GoogleService-Info.plist */; };
 		0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6342225BA0100135B00 /* LogInViewController.swift */; };
 		0F99D6372225BA0F00135B00 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6362225BA0F00135B00 /* SignUpViewController.swift */; };
 		0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6382225BE4A00135B00 /* RoundedView.swift */; };
+		0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */; };
+		0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C9222E962400C7BBDC /* 32-camera.json */; };
 		0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BD622246BAB003ED80E /* AppDelegate.swift */; };
 		0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDA22246BAB003ED80E /* Main.storyboard */; };
 		0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDD22246BAC003ED80E /* Assets.xcassets */; };
 		0FE77BE122246BAC003ED80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */; };
 		0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BED2224766C003ED80E /* OnboardingViewController.swift */; };
 		0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BF022256B63003ED80E /* RoundButton.swift */; };
-		0FE77BFA22259FCB003ED80E /* 1712-bms-rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BF922259FCB003ED80E /* 1712-bms-rocket.json */; };
 		0FF66649222DA0930064D276 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0FF66648222DA0930064D276 /* Readme.md */; };
 		9602D1E4FEBEFE51FC290007 /* Pods_Cruncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C224BBD2FA490641E9617419 /* Pods_Cruncher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F448C9C222721F200D3B697 /* 4052-smoothymon-typing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4052-smoothymon-typing.json"; sourceTree = "<group>"; };
 		0F99D6322225A58900135B00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F99D6342225BA0100135B00 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0F99D6362225BA0F00135B00 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F99D6382225BE4A00135B00 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4675-a-guakka-loader-for-foodvisor.json"; sourceTree = "<group>"; };
+		0FB1C0C9222E962400C7BBDC /* 32-camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "32-camera.json"; sourceTree = "<group>"; };
 		0FE77BD322246BAB003ED80E /* Cruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE77BD622246BAB003ED80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE77BDB22246BAB003ED80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		0FE77BE222246BAC003ED80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FE77BED2224766C003ED80E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0FE77BF022256B63003ED80E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		0FE77BF922259FCB003ED80E /* 1712-bms-rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1712-bms-rocket.json"; sourceTree = "<group>"; };
 		0FF66648222DA0930064D276 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		739D7BD8B781BECFAA296A96 /* Pods-Cruncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cruncher.debug.xcconfig"; path = "Target Support Files/Pods-Cruncher/Pods-Cruncher.debug.xcconfig"; sourceTree = "<group>"; };
 		9C51289B8652D8947D5313B4 /* Pods-Cruncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cruncher.release.xcconfig"; path = "Target Support Files/Pods-Cruncher/Pods-Cruncher.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +75,6 @@
 		0FE77BCA22246BAB003ED80E = {
 			isa = PBXGroup;
 			children = (
-				0FF66648222DA0930064D276 /* Readme.md */,
 				0FE77BD522246BAB003ED80E /* Cruncher */,
 				0FE77BD422246BAB003ED80E /* Products */,
 				04CE67A8C36358E4FD73DB46 /* Pods */,
@@ -106,6 +105,7 @@
 				0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */,
 				0F99D6322225A58900135B00 /* GoogleService-Info.plist */,
 				0FE77BE222246BAC003ED80E /* Info.plist */,
+				0FF66648222DA0930064D276 /* Readme.md */,
 			);
 			path = Cruncher;
 			sourceTree = "<group>";
@@ -146,8 +146,8 @@
 		0FE77BF222258B01003ED80E /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				0F448C9C222721F200D3B697 /* 4052-smoothymon-typing.json */,
-				0FE77BF922259FCB003ED80E /* 1712-bms-rocket.json */,
+				0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */,
+				0FB1C0C9222E962400C7BBDC /* 32-camera.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -221,12 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF66649222DA0930064D276 /* Readme.md in Resources */,
+				0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */,
 				0FE77BE122246BAC003ED80E /* LaunchScreen.storyboard in Resources */,
 				0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */,
-				0F448C9D222721F200D3B697 /* 4052-smoothymon-typing.json in Resources */,
+				0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */,
 				0F99D6332225A58900135B00 /* GoogleService-Info.plist in Resources */,
 				0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */,
-				0FE77BFA22259FCB003ED80E /* 1712-bms-rocket.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

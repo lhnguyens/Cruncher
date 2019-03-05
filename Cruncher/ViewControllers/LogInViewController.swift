@@ -20,7 +20,7 @@ class LogInViewController: UIViewController {
      
     }
     func startAnimation() {
-        loginAnimation.setAnimation(named: "4052-smoothymon-typing")
+        loginAnimation.setAnimation(named: "4675-a-guakka-loader-for-foodvisor")
         loginAnimation.loopAnimation = true
         loginAnimation.play(fromProgress: 0, toProgress: 0.2, withCompletion: nil)
     }

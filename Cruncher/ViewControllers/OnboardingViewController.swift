@@ -20,7 +20,7 @@ class OnboardingViewController: UIViewController {
     
     func startAnimation() {
         
-        animationView.setAnimation(named: "1712-bms-rocket")
+        animationView.setAnimation(named: "32-camera")
         animationView.loopAnimation = true
         animationView.play()
         

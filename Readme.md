@@ -9,3 +9,4 @@ Cruncher är en socialt nätverk för foodies!
 2. Cruncher låter dig också skapa en profil som visar alla dina senaste foodie bilder!  
 
 3. Använda kamera funktionen som är inbyggd för att snabb kunna dela dina foodie bilder!
+
