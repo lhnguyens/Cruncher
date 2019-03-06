@@ -533,25 +533,48 @@ Terms of Service and Privacy Policy</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-cD-cEh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-cD-cEh">
+                                <rect key="frame" x="248" y="477" width="127" height="112"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY9-Kw-uRm">
-                                <rect key="frame" x="164" y="539" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-JR-MDR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="010-Yp-2Uq"/>
+                                    <constraint firstAttribute="height" constant="477" id="Ntm-VT-ZWM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY9-Kw-uRm">
+                                <rect key="frame" x="142" y="491" width="83" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="evu-KG-k6e"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="camera"/>
                                 <connections>
-                                    <action selector="didTapOnToTakePhoto:" destination="Bme-VT-VjK" eventType="touchUpInside" id="IkS-QS-vYc"/>
+                                    <action selector="didTakePhoto:" destination="Bme-VT-VjK" eventType="touchUpInside" id="65I-n3-jIl"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" id="4SP-w6-Uk6"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="Aeo-lE-QyH"/>
+                            <constraint firstItem="tfW-cD-cEh" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="FXq-uH-A1S"/>
+                            <constraint firstItem="tfW-cD-cEh" firstAttribute="top" secondItem="Sc2-JR-MDR" secondAttribute="bottom" id="Ir9-i8-gQE"/>
+                            <constraint firstItem="tfW-cD-cEh" firstAttribute="leading" secondItem="wY9-Kw-uRm" secondAttribute="trailing" constant="23" id="Yox-f7-v3g"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="aGQ-DI-DGI"/>
+                            <constraint firstItem="wY9-Kw-uRm" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" constant="142" id="bT0-rO-Ob4"/>
+                            <constraint firstItem="wY9-Kw-uRm" firstAttribute="top" secondItem="Sc2-JR-MDR" secondAttribute="bottom" constant="14" id="hfG-Ej-tPz"/>
+                            <constraint firstItem="tfW-cD-cEh" firstAttribute="trailing" secondItem="Sc2-JR-MDR" secondAttribute="trailing" id="j6F-G5-Iu1"/>
+                            <constraint firstItem="ceD-QU-tWi" firstAttribute="bottom" secondItem="wY9-Kw-uRm" secondAttribute="bottom" constant="23" id="jma-rB-uTq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ceD-QU-tWi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="ZsB-7b-fMb"/>
                     <connections>
-                        <outlet property="photoPreviewImageView" destination="tfW-cD-cEh" id="54N-0c-7dQ"/>
+                        <outlet property="captureImageView" destination="tfW-cD-cEh" id="8N3-03-MTB"/>
+                        <outlet property="previewView" destination="Sc2-JR-MDR" id="4fR-IZ-9nN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FM-2h-I9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
