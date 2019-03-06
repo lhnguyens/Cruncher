@@ -11,10 +11,17 @@ import UIKit
 class FeedCell: UITableViewCell {
 
     @IBOutlet weak var userNameInFeedLabel: UILabel!
+    @IBOutlet weak var profileImageViewInFeed: UIImageView!
+    @IBOutlet weak var userUploadImageView: UIImageView!
+    @IBOutlet weak var descriptionBox: UILabel!
     
 
     
     func setName(feed: FeedModels) {
         userNameInFeedLabel.text = feed.username
+        descriptionBox.text = feed.descriptionLabel
+        userUploadImageView.image = UIImage(named: feed.pictureName )
+        profileImageViewInFeed.image = UIImage(named: feed.profilePicture)
+        
     }
 }

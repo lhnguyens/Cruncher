@@ -25,13 +25,13 @@ class RoundedButton: UIButton {
     
     
     private func setupButton() {
-        backgroundColor     =  UIColor(red: 253/255, green: 202/255, blue: 155/255, alpha: 1.0)
+        backgroundColor     =  UIColor(red: 25/255, green: 28/255, blue: 74/255, alpha: 1.0)
         layer.cornerRadius  = frame.size.height/2
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 2, height: 2)
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.5
-        setTitleColor(.white, for: .normal)
+        
         
     
         

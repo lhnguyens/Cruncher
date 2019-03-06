@@ -16,6 +16,7 @@
 		0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C9222E962400C7BBDC /* 32-camera.json */; };
 		0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */; };
 		0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */; };
+		0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */; };
 		0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BD622246BAB003ED80E /* AppDelegate.swift */; };
 		0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDA22246BAB003ED80E /* Main.storyboard */; };
 		0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDD22246BAC003ED80E /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		0FB1C0C9222E962400C7BBDC /* 32-camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "32-camera.json"; sourceTree = "<group>"; };
 		0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		0FE77BD322246BAB003ED80E /* Cruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE77BD622246BAB003ED80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE77BDB22246BAB003ED80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */,
+				0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */,
 			);
 			path = "Main ViewController";
 			sourceTree = "<group>";
@@ -115,7 +118,7 @@
 				0FE77BEC22246D5C003ED80E /* Models */,
 				0F99D63A2225C03400135B00 /* Extension */,
 				0FE77BEF22256B22003ED80E /* Other File */,
-				0FE77BF222258B01003ED80E /* JSON */,
+				0FE77BF222258B01003ED80E /* LottieAnimations */,
 				0FE77BD622246BAB003ED80E /* AppDelegate.swift */,
 				0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */,
 				0F99D6322225A58900135B00 /* GoogleService-Info.plist */,
@@ -160,13 +163,13 @@
 			path = "Other File";
 			sourceTree = "<group>";
 		};
-		0FE77BF222258B01003ED80E /* JSON */ = {
+		0FE77BF222258B01003ED80E /* LottieAnimations */ = {
 			isa = PBXGroup;
 			children = (
 				0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */,
 				0FB1C0C9222E962400C7BBDC /* 32-camera.json */,
 			);
-			path = JSON;
+			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
 		811F74783E83D160792D732A /* Frameworks */ = {
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */,
+				0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */,
 				0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */,
 				0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */,
 				0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */,
