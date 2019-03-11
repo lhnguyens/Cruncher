@@ -17,6 +17,8 @@
 		0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */; };
 		0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */; };
 		0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */; };
+		0FE4AEB32231725C003F4AAE /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */; };
+		0FE4AEB522317483003F4AAE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB422317483003F4AAE /* ProfileViewController.swift */; };
 		0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BD622246BAB003ED80E /* AppDelegate.swift */; };
 		0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDA22246BAB003ED80E /* Main.storyboard */; };
 		0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE77BDD22246BAC003ED80E /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BED2224766C003ED80E /* OnboardingViewController.swift */; };
 		0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BF022256B63003ED80E /* RoundButton.swift */; };
 		0FF66649222DA0930064D276 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0FF66648222DA0930064D276 /* Readme.md */; };
+		0FF70173223268EF00E3B8B8 /* ProfileCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF70172223268EF00E3B8B8 /* ProfileCollectionCell.swift */; };
+		0FF70179223274A400E3B8B8 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF70178223274A400E3B8B8 /* ProfileModels.swift */; };
 		9602D1E4FEBEFE51FC290007 /* Pods_Cruncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C224BBD2FA490641E9617419 /* Pods_Cruncher.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,8 @@
 		0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		0FE4AEB422317483003F4AAE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FE77BD322246BAB003ED80E /* Cruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE77BD622246BAB003ED80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE77BDB22246BAB003ED80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		0FE77BED2224766C003ED80E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0FE77BF022256B63003ED80E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0FF66648222DA0930064D276 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		0FF70172223268EF00E3B8B8 /* ProfileCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionCell.swift; sourceTree = "<group>"; };
+		0FF70178223274A400E3B8B8 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
 		739D7BD8B781BECFAA296A96 /* Pods-Cruncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cruncher.debug.xcconfig"; path = "Target Support Files/Pods-Cruncher/Pods-Cruncher.debug.xcconfig"; sourceTree = "<group>"; };
 		9C51289B8652D8947D5313B4 /* Pods-Cruncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cruncher.release.xcconfig"; path = "Target Support Files/Pods-Cruncher/Pods-Cruncher.release.xcconfig"; sourceTree = "<group>"; };
 		C224BBD2FA490641E9617419 /* Pods_Cruncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cruncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,13 +88,46 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		0FB1C0CD222E9C6200C7BBDC /* Main ViewController */ = {
+		0FB1C0CD222E9C6200C7BBDC /* Features ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */,
 				0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */,
+				0FE4AEB422317483003F4AAE /* ProfileViewController.swift */,
 			);
-			path = "Main ViewController";
+			path = "Features ViewController";
+			sourceTree = "<group>";
+		};
+		0FE4AEB622317655003F4AAE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		0FE4AEB722317669003F4AAE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0FF70172223268EF00E3B8B8 /* ProfileCollectionCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0FE4AEB822317682003F4AAE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0F651B52222EA8FB003D2273 /* FeedModels.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		0FE4AEB92231768F003F4AAE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0FF70178223274A400E3B8B8 /* ProfileModels.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		0FE77BCA22246BAB003ED80E = {
@@ -113,7 +154,7 @@
 				0FE77BDA22246BAB003ED80E /* Main.storyboard */,
 				0FE77BDD22246BAC003ED80E /* Assets.xcassets */,
 				0FE77BE922246CB1003ED80E /* Onboarding ViewController */,
-				0FB1C0CD222E9C6200C7BBDC /* Main ViewController */,
+				0FB1C0CD222E9C6200C7BBDC /* Features ViewController */,
 				0FE77BEB22246D52003ED80E /* Cell */,
 				0FE77BEC22246D5C003ED80E /* Models */,
 				0F99D63A2225C03400135B00 /* Extension */,
@@ -141,7 +182,8 @@
 		0FE77BEB22246D52003ED80E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */,
+				0FE4AEB722317669003F4AAE /* Profile */,
+				0FE4AEB622317655003F4AAE /* Feed */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -149,7 +191,8 @@
 		0FE77BEC22246D5C003ED80E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0F651B52222EA8FB003D2273 /* FeedModels.swift */,
+				0FE4AEB92231768F003F4AAE /* Profile */,
+				0FE4AEB822317682003F4AAE /* Feed */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +202,7 @@
 			children = (
 				0FE77BF022256B63003ED80E /* RoundButton.swift */,
 				0F99D6382225BE4A00135B00 /* RoundedView.swift */,
+				0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */,
 			);
 			path = "Other File";
 			sourceTree = "<group>";
@@ -319,9 +363,13 @@
 				0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */,
 				0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */,
 				0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */,
+				0FF70179223274A400E3B8B8 /* ProfileModels.swift in Sources */,
 				0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */,
+				0FF70173223268EF00E3B8B8 /* ProfileCollectionCell.swift in Sources */,
+				0FE4AEB522317483003F4AAE /* ProfileViewController.swift in Sources */,
 				0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */,
 				0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */,
+				0FE4AEB32231725C003F4AAE /* RoundedImageView.swift in Sources */,
 				0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */,
 				0F99D6372225BA0F00135B00 /* SignUpViewController.swift in Sources */,
 			);
