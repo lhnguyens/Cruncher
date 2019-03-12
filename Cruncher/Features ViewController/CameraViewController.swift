@@ -8,8 +8,11 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
+    
+    var db: Firestore!
 
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var captureImageView: UIImageView!
