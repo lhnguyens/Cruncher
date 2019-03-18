@@ -610,6 +610,13 @@ Terms of Service and Privacy Policy</string>
                                     <action selector="captureImage:" destination="Bme-VT-VjK" eventType="touchUpInside" id="Uec-ge-6ed"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDu-9o-XBa">
+                                <rect key="frame" x="263" y="488" width="112" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="UHr-wh-S1D"/>
+                                    <constraint firstAttribute="width" constant="112" id="rcz-cr-Atv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -620,8 +627,10 @@ Terms of Service and Privacy Policy</string>
                             <constraint firstItem="Sc2-JR-MDR" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="8B1-zi-ijF"/>
                             <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="DCk-RF-66v"/>
                             <constraint firstItem="ceD-QU-tWi" firstAttribute="trailing" secondItem="qhv-dm-bIN" secondAttribute="trailing" constant="160" id="HIu-Si-xO7"/>
+                            <constraint firstItem="BDu-9o-XBa" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="Ku3-vz-ATa"/>
                             <constraint firstItem="Sc2-JR-MDR" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="bcX-BU-w8f"/>
                             <constraint firstItem="qhv-dm-bIN" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" constant="160" id="hYG-tg-Vo9"/>
+                            <constraint firstItem="BDu-9o-XBa" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="iBc-CM-7Dj"/>
                             <constraint firstItem="Sc2-JR-MDR" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="jrP-Fs-ptj"/>
                             <constraint firstItem="qhv-dm-bIN" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" constant="557" id="rAa-07-gzj"/>
                             <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="zbY-gV-kZs"/>
@@ -637,7 +646,9 @@ Terms of Service and Privacy Policy</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="captureButton" destination="qhv-dm-bIN" id="bsT-hM-Hb3"/>
                         <outlet property="capturePreviewView" destination="Sc2-JR-MDR" id="aef-mX-pQu"/>
+                        <outlet property="stillPicture" destination="BDu-9o-XBa" id="9XZ-le-Z7Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FM-2h-I9g" userLabel="First Responder" sceneMemberID="firstResponder"/>

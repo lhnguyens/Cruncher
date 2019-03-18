@@ -12,16 +12,30 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
+    @IBOutlet weak var stillPicture: UIImageView!
     @IBOutlet weak var capturePreviewView: UIView!
     
+    @IBOutlet weak var captureButton: UIButton!
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     
     override func viewDidLoad() {
         
+        func styleCaptureButton() {
+            captureButton.layer.borderColor = UIColor.black.cgColor
+            captureButton.layer.borderWidth = 2
+            
+            captureButton.layer.cornerRadius = min(captureButton.frame.width, captureButton.frame.height) / 2
+        }
+        styleCaptureButton()
+        
+        self.view.insertSubview(stillPicture, aboveSubview: capturePreviewView)
+        
+        
         if #available(iOS 10.2, *)
         {
+            
             
             let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
             do {
@@ -50,6 +64,12 @@ class CameraViewController: UIViewController {
         let photoSetting = AVCapturePhotoSettings()
         photoSetting.isAutoStillImageStabilizationEnabled = true
         photoSetting.isHighResolutionPhotoEnabled = true
+        let previewPixelType = photoSetting.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160,
+                             ]
+        photoSetting.previewPhotoFormat = previewFormat
         capturePhotoOutput.capturePhoto(with: photoSetting, delegate: self)
     }
     
@@ -67,6 +87,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         }
         let capturedImage = UIImage.init(data: imageData, scale: 1.0)
         if let image = capturedImage {
+            stillPicture?.image = capturedImage
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
     }
