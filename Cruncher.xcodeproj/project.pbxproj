@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F651B52222EA8FB003D2273 /* FeedModels.swift */; };
-		0F99D6332225A58900135B00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F99D6322225A58900135B00 /* GoogleService-Info.plist */; };
 		0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6342225BA0100135B00 /* LogInViewController.swift */; };
 		0F99D6372225BA0F00135B00 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6362225BA0F00135B00 /* SignUpViewController.swift */; };
 		0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6382225BE4A00135B00 /* RoundedView.swift */; };
@@ -17,6 +16,7 @@
 		0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */; };
 		0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */; };
 		0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */; };
+		0FD7F805223F8A4800CD79D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */; };
 		0FE4AEB32231725C003F4AAE /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */; };
 		0FE4AEB522317483003F4AAE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB422317483003F4AAE /* ProfileViewController.swift */; };
 		0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BD622246BAB003ED80E /* AppDelegate.swift */; };
@@ -33,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		0F651B52222EA8FB003D2273 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
-		0F99D6322225A58900135B00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F99D6342225BA0100135B00 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0F99D6362225BA0F00135B00 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F99D6382225BE4A00135B00 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		0FE4AEB422317483003F4AAE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FE77BD322246BAB003ED80E /* Cruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,10 +85,18 @@
 			isa = PBXGroup;
 			children = (
 				0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */,
-				0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */,
+				0FC96F492239124E00D53F0C /* Camera Features */,
 				0FE4AEB422317483003F4AAE /* ProfileViewController.swift */,
 			);
 			path = "Features ViewController";
+			sourceTree = "<group>";
+		};
+		0FC96F492239124E00D53F0C /* Camera Features */ = {
+			isa = PBXGroup;
+			children = (
+				0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */,
+			);
+			path = "Camera Features";
 			sourceTree = "<group>";
 		};
 		0FE4AEB622317655003F4AAE /* Feed */ = {
@@ -154,7 +162,7 @@
 				0FE77BF222258B01003ED80E /* LottieAnimations */,
 				0FE77BD622246BAB003ED80E /* AppDelegate.swift */,
 				0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */,
-				0F99D6322225A58900135B00 /* GoogleService-Info.plist */,
+				0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */,
 				0FE77BE222246BAC003ED80E /* Info.plist */,
 				0FF66648222DA0930064D276 /* Readme.md */,
 			);
@@ -281,8 +289,8 @@
 				0FE77BE122246BAC003ED80E /* LaunchScreen.storyboard in Resources */,
 				0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */,
 				0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */,
-				0F99D6332225A58900135B00 /* GoogleService-Info.plist in Resources */,
 				0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */,
+				0FD7F805223F8A4800CD79D4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +307,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Cruncher/Pods-Cruncher-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -314,6 +323,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",

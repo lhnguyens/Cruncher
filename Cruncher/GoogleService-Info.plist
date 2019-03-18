@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>379674017477-cuhe5rdrsopiolv22jtreuu6redc90i7.apps.googleusercontent.com</string>
+	<string>451078115895-09b76qgviaq8vnuj6jr4imaoqrq1tgj1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.379674017477-cuhe5rdrsopiolv22jtreuu6redc90i7</string>
+	<string>com.googleusercontent.apps.451078115895-09b76qgviaq8vnuj6jr4imaoqrq1tgj1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAAGdoBRVcr_ypiIgOJP0suUeVgK2YIdbc</string>
+	<string>AIzaSyDAhOWTcp_v072ZHEDd-FF19XWYn1ykDtY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>379674017477</string>
+	<string>451078115895</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.DeveloperLuan.Cruncher</string>
+	<string>com.DeveloperLuan.MA18Firecloud</string>
 	<key>PROJECT_ID</key>
-	<string>cruncher-2f9f4</string>
+	<string>test-9b969</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cruncher-2f9f4.appspot.com</string>
+	<string>test-9b969.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:379674017477:ios:fe3c8653a3c21391</string>
+	<string>1:451078115895:ios:1e509c23a336ae66</string>
 	<key>DATABASE_URL</key>
-	<string>https://cruncher-2f9f4.firebaseio.com</string>
+	<string>https://test-9b969.firebaseio.com</string>
 </dict>
 </plist>
