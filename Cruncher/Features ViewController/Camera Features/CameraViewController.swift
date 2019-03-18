@@ -32,16 +32,18 @@ class CameraViewController: UIViewController {
         
         self.view.insertSubview(stillPicture, aboveSubview: capturePreviewView)
         
-        
         if #available(iOS 10.2, *)
         {
             
             
             let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+            
             do {
                 let input = try AVCaptureDeviceInput(device: captureDevice!)
+               
                 captureSession = AVCaptureSession()
                 captureSession?.addInput(input)
+                captureSession?.sessionPreset = AVCaptureSession.Preset.photo
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                 videoPreviewLayer?.frame = view.layer.bounds
                 capturePreviewView.layer.addSublayer(videoPreviewLayer!)

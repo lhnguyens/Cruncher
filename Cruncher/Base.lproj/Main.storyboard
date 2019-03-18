@@ -595,16 +595,16 @@ Terms of Service and Privacy Policy</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-JR-MDR">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-JR-MDR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhv-dm-bIN">
-                                <rect key="frame" x="160" y="557" width="55" height="55"/>
+                                <rect key="frame" x="157.66666666666666" y="557" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="FwQ-Ea-p50"/>
-                                    <constraint firstAttribute="width" constant="55" id="p6e-bG-ui7"/>
+                                    <constraint firstAttribute="width" constant="60" id="4de-it-BHC"/>
+                                    <constraint firstAttribute="height" constant="60" id="haL-nV-qlH"/>
                                 </constraints>
                                 <connections>
                                     <action selector="captureImage:" destination="Bme-VT-VjK" eventType="touchUpInside" id="Uec-ge-6ed"/>
@@ -620,20 +620,14 @@ Terms of Service and Privacy Policy</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" id="1aV-S7-dfF"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="5M8-At-8Jg"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" id="5ue-lE-fNs"/>
-                            <constraint firstItem="ceD-QU-tWi" firstAttribute="bottom" secondItem="qhv-dm-bIN" secondAttribute="bottom" constant="29" id="645-ta-weD"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="8B1-zi-ijF"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="DCk-RF-66v"/>
-                            <constraint firstItem="ceD-QU-tWi" firstAttribute="trailing" secondItem="qhv-dm-bIN" secondAttribute="trailing" constant="160" id="HIu-Si-xO7"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="5ZX-vy-Yv0"/>
                             <constraint firstItem="BDu-9o-XBa" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="Ku3-vz-ATa"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="bcX-BU-w8f"/>
-                            <constraint firstItem="qhv-dm-bIN" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" constant="160" id="hYG-tg-Vo9"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" id="Qmi-CP-Hw0"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="bottom" secondItem="ceD-QU-tWi" secondAttribute="bottom" id="VJy-oF-MWj"/>
                             <constraint firstItem="BDu-9o-XBa" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="iBc-CM-7Dj"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="trailing" secondItem="ceD-QU-tWi" secondAttribute="trailing" id="jrP-Fs-ptj"/>
-                            <constraint firstItem="qhv-dm-bIN" firstAttribute="top" secondItem="ceD-QU-tWi" secondAttribute="top" constant="557" id="rAa-07-gzj"/>
-                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="zbY-gV-kZs"/>
+                            <constraint firstItem="ceD-QU-tWi" firstAttribute="bottom" secondItem="qhv-dm-bIN" secondAttribute="bottom" constant="24" id="p2L-m4-VqK"/>
+                            <constraint firstItem="Sc2-JR-MDR" firstAttribute="leading" secondItem="ceD-QU-tWi" secondAttribute="leading" id="rOb-RY-lYa"/>
+                            <constraint firstItem="qhv-dm-bIN" firstAttribute="centerX" secondItem="wLV-EA-sPs" secondAttribute="centerX" id="zfr-Vr-ycI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ceD-QU-tWi"/>
                     </view>
@@ -725,13 +719,6 @@ Terms of Service and Privacy Policy</string>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="FG0-qI-ybP" customClass="RoundedImageView" customModule="Cruncher" customModuleProvider="target">
-                                        <rect key="frame" x="104" y="48" width="135" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="OdV-T3-P8f"/>
-                                            <constraint firstAttribute="width" constant="135" id="S1x-0R-yRB"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emily Kaze" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="K9p-hw-KQ6">
                                         <rect key="frame" x="125" y="197" width="92" height="21.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
@@ -753,22 +740,32 @@ Terms of Service and Privacy Policy</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="FG0-qI-ybP" customClass="RoundedImageView" customModule="Cruncher" customModuleProvider="target">
+                                        <rect key="frame" x="111.66666666666669" y="31" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="aZi-SZ-7uB"/>
+                                            <constraint firstAttribute="height" constant="120" id="rqw-og-xdK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="FG0-qI-ybP" firstAttribute="top" secondItem="Xm2-VV-EjE" secondAttribute="top" constant="48" id="1FA-ga-a8b"/>
                                     <constraint firstItem="11P-yQ-MjL" firstAttribute="top" secondItem="K9p-hw-KQ6" secondAttribute="bottom" constant="7.3300000000000001" id="286-RO-EG6"/>
                                     <constraint firstItem="iD7-vY-N92" firstAttribute="top" secondItem="80L-ut-TZA" secondAttribute="bottom" constant="11.67" id="IjA-An-uj0"/>
                                     <constraint firstItem="80L-ut-TZA" firstAttribute="top" secondItem="K9p-hw-KQ6" secondAttribute="bottom" constant="73.329999999999998" id="Mmt-lu-hCa"/>
                                     <constraint firstItem="iD7-vY-N92" firstAttribute="leading" secondItem="Xm2-VV-EjE" secondAttribute="leading" constant="16" id="TRV-Gi-Jgl"/>
                                     <constraint firstAttribute="trailing" secondItem="iD7-vY-N92" secondAttribute="trailing" constant="16" id="Y33-5f-Vjh"/>
-                                    <constraint firstItem="K9p-hw-KQ6" firstAttribute="top" secondItem="FG0-qI-ybP" secondAttribute="bottom" constant="21" id="aLl-PR-EF5"/>
+                                    <constraint firstItem="FG0-qI-ybP" firstAttribute="centerX" secondItem="Xm2-VV-EjE" secondAttribute="centerX" id="a2f-eK-TAp"/>
                                     <constraint firstAttribute="trailing" secondItem="80L-ut-TZA" secondAttribute="trailing" constant="110" id="ch9-KX-cGf"/>
-                                    <constraint firstAttribute="trailing" secondItem="FG0-qI-ybP" secondAttribute="trailing" constant="104" id="gDR-DF-fxE"/>
                                     <constraint firstItem="iD7-vY-N92" firstAttribute="top" secondItem="80L-ut-TZA" secondAttribute="bottom" constant="11.67" id="mIB-Sb-sW4"/>
+                                    <constraint firstItem="FG0-qI-ybP" firstAttribute="top" secondItem="Xm2-VV-EjE" secondAttribute="top" constant="31" id="nbd-eT-wam"/>
                                     <constraint firstItem="80L-ut-TZA" firstAttribute="leading" secondItem="Xm2-VV-EjE" secondAttribute="leading" constant="110" id="oB0-ch-WUo"/>
                                     <constraint firstItem="iD7-vY-N92" firstAttribute="top" secondItem="11P-yQ-MjL" secondAttribute="bottom" constant="30.670000000000002" id="oUN-Uw-8eP"/>
-                                    <constraint firstItem="FG0-qI-ybP" firstAttribute="leading" secondItem="Xm2-VV-EjE" secondAttribute="leading" constant="104" id="ri8-3k-sjZ"/>
                                     <constraint firstItem="K9p-hw-KQ6" firstAttribute="leading" secondItem="Xm2-VV-EjE" secondAttribute="leading" constant="125" id="rmr-n5-FXh"/>
                                     <constraint firstItem="11P-yQ-MjL" firstAttribute="leading" secondItem="Xm2-VV-EjE" secondAttribute="leading" constant="48" id="uRh-af-5Ae"/>
                                     <constraint firstAttribute="trailing" secondItem="11P-yQ-MjL" secondAttribute="trailing" constant="48" id="wFd-fT-qQj"/>
