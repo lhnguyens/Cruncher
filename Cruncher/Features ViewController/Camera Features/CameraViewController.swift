@@ -13,9 +13,11 @@ import AVFoundation
 class CameraViewController: UIViewController {
     
     @IBOutlet weak var stillPicture: UIImageView!
-    @IBOutlet weak var capturePreviewView: UIView!
     
+    @IBOutlet weak var capturePreviewView: UIView!
     @IBOutlet weak var captureButton: UIButton!
+
+    
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
@@ -28,20 +30,23 @@ class CameraViewController: UIViewController {
             
             captureButton.layer.cornerRadius = min(captureButton.frame.width, captureButton.frame.height) / 2
         }
+        
         styleCaptureButton()
         
         self.view.insertSubview(stillPicture, aboveSubview: capturePreviewView)
-        
         
         if #available(iOS 10.2, *)
         {
             
             
             let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+            
             do {
                 let input = try AVCaptureDeviceInput(device: captureDevice!)
+               
                 captureSession = AVCaptureSession()
                 captureSession?.addInput(input)
+                captureSession?.sessionPreset = AVCaptureSession.Preset.hd1280x720
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                 videoPreviewLayer?.frame = view.layer.bounds
                 capturePreviewView.layer.addSublayer(videoPreviewLayer!)
@@ -73,6 +78,19 @@ class CameraViewController: UIViewController {
         capturePhotoOutput.capturePhoto(with: photoSetting, delegate: self)
     }
     
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if segue.identifier == "goToUploadSegue" {
+            if let destVC = segue.destination as? UploadViewController {
+                destVC.capturedImageToUpload = stillPicture.image
+                
+            }
+            
+        }
+    }
+    
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
@@ -85,10 +103,15 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         guard let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
             return
         }
+        
         let capturedImage = UIImage.init(data: imageData, scale: 1.0)
+        
         if let image = capturedImage {
             stillPicture?.image = capturedImage
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
+        
+        
+      
     }
 }

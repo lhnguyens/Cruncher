@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4ADF592241169300475A5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ADF582241169300475A5A /* UploadViewController.swift */; };
 		0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F651B52222EA8FB003D2273 /* FeedModels.swift */; };
 		0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6342225BA0100135B00 /* LogInViewController.swift */; };
 		0F99D6372225BA0F00135B00 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6362225BA0F00135B00 /* SignUpViewController.swift */; };
 		0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6382225BE4A00135B00 /* RoundedView.swift */; };
+		0FA43071224AABB9003F74DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FA43070224AABB9003F74DF /* GoogleService-Info.plist */; };
+		0FB128E82244F8390086B937 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128E72244F8390086B937 /* User.swift */; };
+		0FB128EA2244F8450086B937 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128E92244F8450086B937 /* Post.swift */; };
+		0FB128EE2244FC840086B937 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128ED2244FC840086B937 /* UserCell.swift */; };
 		0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */; };
 		0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C9222E962400C7BBDC /* 32-camera.json */; };
 		0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */; };
 		0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */; };
 		0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */; };
-		0FD7F805223F8A4800CD79D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */; };
 		0FE4AEB32231725C003F4AAE /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */; };
 		0FE4AEB522317483003F4AAE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AEB422317483003F4AAE /* ProfileViewController.swift */; };
 		0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE77BD622246BAB003ED80E /* AppDelegate.swift */; };
@@ -32,16 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F4ADF582241169300475A5A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0F651B52222EA8FB003D2273 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
 		0F99D6342225BA0100135B00 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0F99D6362225BA0F00135B00 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F99D6382225BE4A00135B00 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		0FA43070224AABB9003F74DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FB128E72244F8390086B937 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0FB128E92244F8450086B937 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0FB128ED2244FC840086B937 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4675-a-guakka-loader-for-foodvisor.json"; sourceTree = "<group>"; };
 		0FB1C0C9222E962400C7BBDC /* 32-camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "32-camera.json"; sourceTree = "<group>"; };
 		0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FE4AEB22231725C003F4AAE /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		0FE4AEB422317483003F4AAE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0FE77BD322246BAB003ED80E /* Cruncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cruncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */,
-				0FC96F492239124E00D53F0C /* Camera Features */,
 				0FE4AEB422317483003F4AAE /* ProfileViewController.swift */,
+				0FC96F492239124E00D53F0C /* Camera Features */,
 			);
 			path = "Features ViewController";
 			sourceTree = "<group>";
@@ -95,22 +103,24 @@
 			isa = PBXGroup;
 			children = (
 				0FC2EBB7222FF2B700C22F72 /* CameraViewController.swift */,
+				0F4ADF582241169300475A5A /* UploadViewController.swift */,
 			);
 			path = "Camera Features";
 			sourceTree = "<group>";
 		};
-		0FE4AEB622317655003F4AAE /* Feed */ = {
+		0FE4AEB622317655003F4AAE /* Post */ = {
 			isa = PBXGroup;
 			children = (
 				0FB1C0D0222EA40300C7BBDC /* FeedCell.swift */,
 			);
-			path = Feed;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		0FE4AEB722317669003F4AAE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				0FF70172223268EF00E3B8B8 /* ProfileCollectionCell.swift */,
+				0FB128ED2244FC840086B937 /* UserCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -161,8 +171,8 @@
 				0FE77BEF22256B22003ED80E /* Other File */,
 				0FE77BF222258B01003ED80E /* LottieAnimations */,
 				0FE77BD622246BAB003ED80E /* AppDelegate.swift */,
+				0FA43070224AABB9003F74DF /* GoogleService-Info.plist */,
 				0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */,
-				0FD7F804223F8A4800CD79D4 /* GoogleService-Info.plist */,
 				0FE77BE222246BAC003ED80E /* Info.plist */,
 				0FF66648222DA0930064D276 /* Readme.md */,
 			);
@@ -183,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE4AEB722317669003F4AAE /* Profile */,
-				0FE4AEB622317655003F4AAE /* Feed */,
+				0FE4AEB622317655003F4AAE /* Post */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 		0FE77BEC22246D5C003ED80E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0FB128E72244F8390086B937 /* User.swift */,
+				0FB128E92244F8450086B937 /* Post.swift */,
 				0FE4AEB92231768F003F4AAE /* Profile */,
 				0FE4AEB822317682003F4AAE /* Feed */,
 			);
@@ -284,13 +296,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA43071224AABB9003F74DF /* GoogleService-Info.plist in Resources */,
 				0FF66649222DA0930064D276 /* Readme.md in Resources */,
 				0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */,
 				0FE77BE122246BAC003ED80E /* LaunchScreen.storyboard in Resources */,
 				0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */,
 				0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */,
 				0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */,
-				0FD7F805223F8A4800CD79D4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */,
+				0F4ADF592241169300475A5A /* UploadViewController.swift in Sources */,
 				0FC2EBB8222FF2B700C22F72 /* CameraViewController.swift in Sources */,
 				0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */,
+				0FB128EA2244F8450086B937 /* Post.swift in Sources */,
+				0FB128E82244F8390086B937 /* User.swift in Sources */,
+				0FB128EE2244FC840086B937 /* UserCell.swift in Sources */,
 				0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */,
 				0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */,
 				0FF70179223274A400E3B8B8 /* ProfileModels.swift in Sources */,

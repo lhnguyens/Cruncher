@@ -10,18 +10,20 @@ import UIKit
 import Lottie
 
 class OnboardingViewController: UIViewController {
-    @IBOutlet weak var animationView: LOTAnimationView!
+    @IBOutlet weak var animationView: AnimationView!
+    let animation = Animation.named("32-camera")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     startAnimation()
+        
     }
     
     func startAnimation() {
-        
-        animationView.setAnimation(named: "32-camera")
-        animationView.loopAnimation = true
+        animationView.animation = animation
+        animationView.loopMode = .loop
         animationView.play()
         
     }
