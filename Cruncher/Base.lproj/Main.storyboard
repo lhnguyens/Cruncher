@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                 <color key="textColor" red="0.13546517491340637" green="0.15674841403961182" blue="0.34904077649116516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4L-c8-6OI" customClass="LOTAnimationView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4L-c8-6OI" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="0.0" y="247" width="375" height="364"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -259,7 +259,7 @@ Terms of Service and Privacy Policy</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-Lf-8kR" customClass="LOTAnimationView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-Lf-8kR" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="71" y="94" width="240" height="228"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -561,6 +561,7 @@ Terms of Service and Privacy Policy</string>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="descriptionBox" destination="fTx-sd-ifn" id="7vC-6n-ay4"/>
+                                            <outlet property="likesLabel" destination="cdU-aQ-9Zn" id="JEi-dV-aEz"/>
                                             <outlet property="profileImageViewInFeed" destination="Q2U-Ot-eNK" id="xO3-Yb-hRQ"/>
                                             <outlet property="userNameInFeedLabel" destination="w20-lr-OpW" id="nDV-iw-ryk"/>
                                             <outlet property="userUploadImageView" destination="e2r-jO-W8l" id="5v3-pI-P5k"/>
@@ -635,7 +636,7 @@ Terms of Service and Privacy Policy</string>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="SrP-pq-LN6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Tcw-2a-hbN" kind="show" id="Sx7-OI-BtG"/>
+                                <segue destination="Tcw-2a-hbN" kind="show" identifier="goToUploadSegue" id="Sx7-OI-BtG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -652,17 +653,33 @@ Terms of Service and Privacy Policy</string>
         <!--Post Your Image-->
         <scene sceneID="RzM-O6-jhi">
             <objects>
-                <viewController title="Post Your Image" hidesBottomBarWhenPushed="YES" id="Tcw-2a-hbN" sceneMemberID="viewController">
+                <viewController title="Post Your Image" hidesBottomBarWhenPushed="YES" id="Tcw-2a-hbN" customClass="UploadViewController" customModule="Cruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZ1-Pi-s4f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-Fk-egU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="l1h-13-Jrx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zq9-q7-K52" firstAttribute="trailing" secondItem="MGJ-Fk-egU" secondAttribute="trailing" id="2UQ-le-Qcy"/>
+                            <constraint firstItem="MGJ-Fk-egU" firstAttribute="leading" secondItem="Zq9-q7-K52" secondAttribute="leading" id="8ky-pQ-nb4"/>
+                            <constraint firstItem="MGJ-Fk-egU" firstAttribute="top" secondItem="Zq9-q7-K52" secondAttribute="top" id="n8P-gK-qan"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zq9-q7-K52"/>
                     </view>
+                    <connections>
+                        <outlet property="capturedImagePreview" destination="MGJ-Fk-egU" id="OtM-R1-jHN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMn-RA-bq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3289" y="-512"/>
+            <point key="canvasLocation" x="3288.8000000000002" y="-512.06896551724139"/>
         </scene>
         <!--Your Profile-->
         <scene sceneID="HkS-OY-TtY">
@@ -872,12 +889,12 @@ Terms of Service and Privacy Policy</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Mail Icon" width="44.792224884033203" height="44.792224884033203"/>
+        <image name="Mail Icon" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Password Icon" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ProfilePictureUser1" width="1106.6666259765625" height="1677.6666259765625"/>
         <image name="SalmonDish" width="2005.3333740234375" height="1338.6666259765625"/>
         <image name="camera" width="30" height="30"/>
-        <image name="defaultHeart" width="40" height="40"/>
+        <image name="defaultHeart" width="170.66667175292969" height="170.66667175292969"/>
         <image name="list" width="30" height="30"/>
         <image name="user2profilepic" width="666.66668701171875" height="833.33331298828125"/>
         <image name="user_male" width="30" height="30"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Lottie
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

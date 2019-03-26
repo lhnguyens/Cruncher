@@ -11,8 +11,10 @@ import Lottie
 
 class LogInViewController: UIViewController {
     
-    @IBOutlet weak var loginAnimation: LOTAnimationView!
+    @IBOutlet weak var loginAnimation: AnimationView!
     @IBOutlet weak var loginView: UIView!
+    let animation = Animation.named("4675-a-guakka-loader-for-foodvisor")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,9 @@ class LogInViewController: UIViewController {
      
     }
     func startAnimation() {
-        loginAnimation.setAnimation(named: "4675-a-guakka-loader-for-foodvisor")
-        loginAnimation.loopAnimation = true
-        loginAnimation.play(fromProgress: 0, toProgress: 0.2, withCompletion: nil)
+        loginAnimation.animation = animation
+        loginAnimation.loopMode = .loop
+        loginAnimation.play()
     }
     
 
