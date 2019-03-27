@@ -19,4 +19,12 @@ class Post {
         self.description = description
         self.likes = likes
     }
+    
+    func toAny() -> [String: Any] {
+        
+        return ["user": user!,
+                "description": description!,
+                "likes": likes!
+        ]
+    }
 }

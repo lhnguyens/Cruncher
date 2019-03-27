@@ -18,13 +18,13 @@ class FeedCell: UITableViewCell {
     
 
     
-    func setName(feed: FeedModels) {
-        userNameInFeedLabel.text = feed.username
-        descriptionBox.text = feed.descriptionLabel
-        userUploadImageView.image = UIImage(named: feed.pictureName )
-        profileImageViewInFeed.image = UIImage(named: feed.profilePicture)
-        
-    }
+//    func setName(feed: FeedModels) {
+//        userNameInFeedLabel.text = feed.username
+//        descriptionBox.text = feed.descriptionLabel
+//        userUploadImageView.image = UIImage(named: feed.pictureName )
+//        profileImageViewInFeed.image = UIImage(named: feed.profilePicture)
+//
+//    }
     
     func populatePosts(post: Post) {
         userNameInFeedLabel.text = post.user

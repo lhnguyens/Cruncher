@@ -20,10 +20,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var postsData: [Post] = []
     var postListener: ListenerRegistration?
     
+    //Sample Array that contains the uploaded data to firebase
+    var samplePostsUploaded = [Post]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //        feed = createArrayForFeed()
+        
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -51,24 +57,23 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //
     //    }
     
+    func populateSamplePosts() {
+        let sampleUserOne = Post(user: "sampleUserOne", description: "Test 1", likes: 1)
+        let sampleUserTwo = Post(user: "sampleUserTwo", description: "Test 2", likes: 2)
+        let sampleUserThree = Post(user: "sampleUserThree", description: "Test 3", likes: 3)
+        let sampleUserFour = Post(user: "sampleUserFour", description: "Test 4", likes: 4)
+        let sampleUserFive = Post(user: "sampleUserFive", description: "Test 5", likes: 5)
+        let sampleUserSix = Post(user: "sampleUserSix", description: "Test 6", likes: 6)
+        let sampleUserSeven = Post(user: "sampleUserSeven", description: "Test 7", likes: 7)
+        let sampleUserEight = Post(user: "sampleUserEight", description: "Test 8", likes: 8)
+        
+        for item in samplePostsUploaded {
+            
+        }
+        
+    }
+    
     func findPosts() {
-        //        let db = Firestore.firestore().collection("posts").limit(to: 20)
-        //        postListener = db.addSnapshotListener { (snapshot, error) in
-        //            if let error = error {
-        //                print("Error when loading users: \(error)")
-        //            }
-        //            guard let snapshot = snapshot else { return }
-        //            self.postsData = []
-        //            for cruncherDocuments in snapshot.documents {
-        //                if let newPosts = Post(cruncherDocuments) {
-        //                self.postsData.append(newPosts)
-        //                }
-        //            }
-        //            self.tableView.reloadData()
-        //
-        //        }
-        
-        
         let db = Firestore.firestore().collection("posts").limit(to: 20)
        postListener = db.addSnapshotListener { (querySnapshot, error) in
             if let error = error {
@@ -83,12 +88,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         let newPosts = Post(user: user, description: description, likes: likes)
                         self.postsData.append(newPosts)
                     }
-                     self.tableView.reloadData()
                 }
+                 self.tableView.reloadData()
             }
-           
-            
-            
         }
         
     }
