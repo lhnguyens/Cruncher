@@ -15,7 +15,6 @@
 		0FA43071224AABB9003F74DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FA43070224AABB9003F74DF /* GoogleService-Info.plist */; };
 		0FB128E82244F8390086B937 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128E72244F8390086B937 /* User.swift */; };
 		0FB128EA2244F8450086B937 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128E92244F8450086B937 /* Post.swift */; };
-		0FB128EE2244FC840086B937 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB128ED2244FC840086B937 /* UserCell.swift */; };
 		0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */; };
 		0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1C0C9222E962400C7BBDC /* 32-camera.json */; };
 		0FB1C0CF222E9C9700C7BBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */; };
@@ -44,7 +43,6 @@
 		0FA43070224AABB9003F74DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FB128E72244F8390086B937 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0FB128E92244F8450086B937 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		0FB128ED2244FC840086B937 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0FB1C0C3222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4675-a-guakka-loader-for-foodvisor.json"; sourceTree = "<group>"; };
 		0FB1C0C9222E962400C7BBDC /* 32-camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "32-camera.json"; sourceTree = "<group>"; };
 		0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -89,14 +87,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		0FB1C0CD222E9C6200C7BBDC /* Features ViewController */ = {
+		0FB1C0CD222E9C6200C7BBDC /* Features  */ = {
 			isa = PBXGroup;
 			children = (
 				0FB1C0CE222E9C9700C7BBDC /* FeedViewController.swift */,
 				0FE4AEB422317483003F4AAE /* ProfileViewController.swift */,
 				0FC96F492239124E00D53F0C /* Camera Features */,
 			);
-			path = "Features ViewController";
+			path = "Features ";
 			sourceTree = "<group>";
 		};
 		0FC96F492239124E00D53F0C /* Camera Features */ = {
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				0FF70172223268EF00E3B8B8 /* ProfileCollectionCell.swift */,
-				0FB128ED2244FC840086B937 /* UserCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -164,10 +161,10 @@
 			children = (
 				0FE77BDA22246BAB003ED80E /* Main.storyboard */,
 				0FE77BDD22246BAC003ED80E /* Assets.xcassets */,
-				0FE77BE922246CB1003ED80E /* Onboarding ViewController */,
-				0FB1C0CD222E9C6200C7BBDC /* Features ViewController */,
-				0FE77BEB22246D52003ED80E /* Cell */,
+				0FE77BE922246CB1003ED80E /* Onboarding */,
+				0FB1C0CD222E9C6200C7BBDC /* Features  */,
 				0FE77BEC22246D5C003ED80E /* Models */,
+				0FE77BEB22246D52003ED80E /* Cell */,
 				0FE77BEF22256B22003ED80E /* Other File */,
 				0FE77BF222258B01003ED80E /* LottieAnimations */,
 				0FE77BD622246BAB003ED80E /* AppDelegate.swift */,
@@ -179,14 +176,14 @@
 			path = Cruncher;
 			sourceTree = "<group>";
 		};
-		0FE77BE922246CB1003ED80E /* Onboarding ViewController */ = {
+		0FE77BE922246CB1003ED80E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				0FE77BED2224766C003ED80E /* OnboardingViewController.swift */,
 				0F99D6342225BA0100135B00 /* LogInViewController.swift */,
 				0F99D6362225BA0F00135B00 /* SignUpViewController.swift */,
 			);
-			path = "Onboarding ViewController";
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		0FE77BEB22246D52003ED80E /* Cell */ = {
@@ -386,7 +383,6 @@
 				0FE77BF122256B63003ED80E /* RoundButton.swift in Sources */,
 				0FB128EA2244F8450086B937 /* Post.swift in Sources */,
 				0FB128E82244F8390086B937 /* User.swift in Sources */,
-				0FB128EE2244FC840086B937 /* UserCell.swift in Sources */,
 				0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */,
 				0FE77BEE2224766C003ED80E /* OnboardingViewController.swift in Sources */,
 				0FF70179223274A400E3B8B8 /* ProfileModels.swift in Sources */,
