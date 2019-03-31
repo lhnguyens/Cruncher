@@ -29,7 +29,7 @@ class FeedCell: UITableViewCell {
     func populatePosts(post: Post) {
         userNameInFeedLabel.text = post.user
         descriptionBox.text = post.description
-        userUploadImageView.image = UIImage(named: "steak")
+        userUploadImageView.image = UIImage(named:post.imageURL!)
         profileImageViewInFeed.image = UIImage(named: "user2profilepic")
         likesLabel.text = String(post.likes!)
     }

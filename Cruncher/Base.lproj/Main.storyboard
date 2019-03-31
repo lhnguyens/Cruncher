@@ -705,6 +705,7 @@ Terms of Service and Privacy Policy</string>
                     </view>
                     <connections>
                         <outlet property="capturedImagePreview" destination="MGJ-Fk-egU" id="OtM-R1-jHN"/>
+                        <outlet property="descriptionTextField" destination="Z3t-FF-nAO" id="QU7-0g-tXs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMn-RA-bq1" userLabel="First Responder" sceneMemberID="firstResponder"/>

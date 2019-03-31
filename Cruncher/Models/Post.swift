@@ -13,18 +13,21 @@ class Post {
     var user: String?
     var description: String?
     var likes: Int?
+    var imageURL: String?
     
-    init(user: String, description: String, likes: Int) {
+    init(user: String, description: String, likes: Int, imageURL: String) {
         self.user = user
         self.description = description
         self.likes = likes
+        self.imageURL = imageURL
     }
     
     func toAny() -> [String: Any] {
         
         return ["user": user!,
                 "description": description!,
-                "likes": likes!
+                "likes": likes!,
+                "imageURL": imageURL!
         ]
     }
 }
