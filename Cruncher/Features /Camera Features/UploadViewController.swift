@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
-import SDWebImage
 
-class UploadViewController: UIViewController {
+
+class UploadViewController: UIViewController, UITextFieldDelegate {
     
     var capturedImageToUpload: UIImage?
     var username: String?
@@ -23,8 +23,15 @@ class UploadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         setCapturedImageToPreview()
+        configureTextField()
         self.hideKeyboardWhenTappedAround()
+        
+        
+        
+        dismissKeyboard()
     }
     
     func setCapturedImageToPreview () {
@@ -65,7 +72,7 @@ class UploadViewController: UIViewController {
                     if let url = url {
                         let downloadURL = url.absoluteString
                         let db = Firestore.firestore().collection("posts")
-                        let uploadingPost = Post(user: "Luan", description: "Test", likes: 1, imageURL: downloadURL)
+                        let uploadingPost = Post(user: "Steve.Test", description: self.descriptionTextField.text!, likes: 1, imageURL: downloadURL)
                         db.addDocument(data: uploadingPost.toAny())
                         print("Posts added to firebase with url for image")
                         
@@ -85,6 +92,16 @@ class UploadViewController: UIViewController {
         
     }
     
+    func configureTextField() {
+        descriptionTextField.delegate = self
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
     
     
     
@@ -96,6 +113,7 @@ extension UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        dismissKeyboard()
         
     }
     

@@ -24,7 +24,7 @@ class FeedCell: UITableViewCell {
         userNameInFeedLabel.text = post.user
         descriptionBox.text = post.description
         userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
-        profileImageViewInFeed.image = UIImage(named: "user2profilepic")
+        profileImageViewInFeed.image = UIImage(named: "user3profilepic")
         likesLabel.text = String(post.likes!)
     }
     
