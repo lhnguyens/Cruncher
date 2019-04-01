@@ -16,6 +16,8 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var userUploadImageView: UIImageView!
     @IBOutlet weak var descriptionBox: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
     
 
     
@@ -26,6 +28,11 @@ class FeedCell: UITableViewCell {
         userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
         profileImageViewInFeed.image = UIImage(named: "user3profilepic")
         likesLabel.text = String(post.likes!)
+    }
+    
+    
+    @IBAction func likeButtonTapped(_ sender: UIButton) {
+        likeButton.isSelected = !likeButton.isSelected
     }
     
 

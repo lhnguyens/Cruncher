@@ -510,7 +510,11 @@ Terms of Service and Privacy Policy</string>
                                                                 <constraint firstAttribute="width" constant="36" id="xqZ-Ls-NyB"/>
                                                                 <constraint firstAttribute="height" constant="40" id="yeN-Ia-3l8"/>
                                                             </constraints>
-                                                            <state key="normal" image="defaultHeart"/>
+                                                            <state key="normal" image="unchecked"/>
+                                                            <state key="selected" image="checked2"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTapped:" destination="ayV-SQ-cJu" eventType="touchUpInside" id="zrr-t4-YSd"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-aQ-9Zn">
                                                             <rect key="frame" x="307" y="247" width="28" height="34"/>
@@ -561,6 +565,7 @@ Terms of Service and Privacy Policy</string>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="descriptionBox" destination="fTx-sd-ifn" id="7vC-6n-ay4"/>
+                                            <outlet property="likeButton" destination="VEc-MB-Kfe" id="9Zp-5X-vA9"/>
                                             <outlet property="likesLabel" destination="cdU-aQ-9Zn" id="JEi-dV-aEz"/>
                                             <outlet property="profileImageViewInFeed" destination="Q2U-Ot-eNK" id="xO3-Yb-hRQ"/>
                                             <outlet property="userNameInFeedLabel" destination="w20-lr-OpW" id="nDV-iw-ryk"/>
@@ -926,8 +931,9 @@ Terms of Service and Privacy Policy</string>
         <image name="ProfilePictureUser1" width="1106.6666259765625" height="1677.6666259765625"/>
         <image name="SalmonDish" width="2005.3333740234375" height="1338.6666259765625"/>
         <image name="camera" width="30" height="30"/>
-        <image name="defaultHeart" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="checked2" width="170.66667175292969" height="170.66667175292969"/>
         <image name="list" width="30" height="30"/>
+        <image name="unchecked" width="170.66667175292969" height="170.66667175292969"/>
         <image name="user2profilepic" width="666.66668701171875" height="833.33331298828125"/>
         <image name="user_male" width="30" height="30"/>
     </resources>

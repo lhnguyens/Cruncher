@@ -13,20 +13,17 @@ import Firebase
 
 class User {
     var name: String
-    var profilePicture: UIImage?
+    var profilePicture: String?
     var profileDescription: String?
     var username: String
-    var userID: String
+    
     var posts: [Post] = []
     
-    
-    
-    init(name: String, profilePicture: UIImage, profileDescription: String, username: String, userID: String, posts:[Post]) {
+    init(name: String, profilePicture: String, profileDescription: String, username: String, posts:[Post]) {
         self.name = name
-        self.profilePicture = UIImage(named: "<#T##String#>")
+        self.profilePicture = profilePicture
         self.profileDescription = profileDescription
         self.username = username
-        self.userID = userID
         self.posts = posts
     }
 
