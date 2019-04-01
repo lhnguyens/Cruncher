@@ -9,6 +9,7 @@
 import UIKit
 
 import Firebase
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     

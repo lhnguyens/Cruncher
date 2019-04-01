@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class UploadViewController: UIViewController {
     
@@ -72,7 +73,6 @@ class UploadViewController: UIViewController {
                         
                     }
                 }
-                
             }
             print(query ?? "No query")
             print(error ?? "No error")

@@ -101,6 +101,9 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.7.0)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
   - Spring (1.0.6)
   - SVProgressHUD (2.2.5)
 
@@ -109,6 +112,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - lottie-ios
+  - SDWebImage
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SVProgressHUD
 
@@ -131,6 +135,7 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - Protobuf
+    - SDWebImage
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -160,9 +165,10 @@ SPEC CHECKSUMS:
   lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c33f7fdee6fbd1953dacb74e48b92b45674cabe9
+PODFILE CHECKSUM: 041612e43d9a392da447f1430f11e555891d3200
 
 COCOAPODS: 1.6.1

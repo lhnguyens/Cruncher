@@ -10,6 +10,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+pod 'SDWebImage'
 
 
 

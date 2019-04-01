@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FeedCell: UITableViewCell {
 
@@ -18,20 +19,15 @@ class FeedCell: UITableViewCell {
     
 
     
-//    func setName(feed: FeedModels) {
-//        userNameInFeedLabel.text = feed.username
-//        descriptionBox.text = feed.descriptionLabel
-//        userUploadImageView.image = UIImage(named: feed.pictureName )
-//        profileImageViewInFeed.image = UIImage(named: feed.profilePicture)
-//
-//    }
     
     func populatePosts(post: Post) {
         userNameInFeedLabel.text = post.user
         descriptionBox.text = post.description
-        userUploadImageView.image = UIImage(named:post.imageURL!)
+        userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
         profileImageViewInFeed.image = UIImage(named: "user2profilepic")
         likesLabel.text = String(post.likes!)
     }
+    
+
   
 }
