@@ -51,11 +51,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     
     
     func uploadImageToStorageAndCreatePost () {
-        
-        var idGenerator = SystemRandomNumberGenerator()
-        let id = Int.random(in: 10000...99999, using: &idGenerator)
-        imageFileName = String(id)
-        
+        imageFileName = UUID().uuidString
         let storage = Storage.storage()
         let storageRef = storage.reference().child("PhotosUploaded")
         let imagesRef = storageRef.child(imageFileName!)
