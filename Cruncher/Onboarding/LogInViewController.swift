@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import Firebase
 
 class LogInViewController: UIViewController {
     

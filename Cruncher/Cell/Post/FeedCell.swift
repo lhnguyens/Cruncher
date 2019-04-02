@@ -19,8 +19,6 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     
     
-
-    
     
     func populatePosts(post: Post) {
         userNameInFeedLabel.text = post.user

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F05033222538151000D7341 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05033122538151000D7341 /* SetUpProfileViewController.swift */; };
 		0F4ADF592241169300475A5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ADF582241169300475A5A /* UploadViewController.swift */; };
 		0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F651B52222EA8FB003D2273 /* FeedModels.swift */; };
 		0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6342225BA0100135B00 /* LogInViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F05033122538151000D7341 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetUpProfileViewController.swift; path = "New Group/SetUpProfileViewController.swift"; sourceTree = "<group>"; };
 		0F4ADF582241169300475A5A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0F651B52222EA8FB003D2273 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
 		0F99D6342225BA0100135B00 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				0FE77BED2224766C003ED80E /* OnboardingViewController.swift */,
 				0F99D6342225BA0100135B00 /* LogInViewController.swift */,
 				0F99D6362225BA0F00135B00 /* SignUpViewController.swift */,
+				0F05033122538151000D7341 /* SetUpProfileViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				0FE77BD722246BAB003ED80E /* AppDelegate.swift in Sources */,
 				0FF70173223268EF00E3B8B8 /* ProfileCollectionCell.swift in Sources */,
 				0FE4AEB522317483003F4AAE /* ProfileViewController.swift in Sources */,
+				0F05033222538151000D7341 /* SetUpProfileViewController.swift in Sources */,
 				0FB1C0D1222EA40300C7BBDC /* FeedCell.swift in Sources */,
 				0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */,
 				0FE4AEB32231725C003F4AAE /* RoundedImageView.swift in Sources */,

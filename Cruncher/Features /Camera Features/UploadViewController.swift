@@ -71,7 +71,6 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
                         let uploadingPost = Post(user: "Steve.Test", description: self.descriptionTextField.text!, likes: 1, imageURL: downloadURL)
                         db.addDocument(data: uploadingPost.toAny())
                         print("Posts added to firebase with url for image")
-                        
                         self.dismiss(animated: true)
                         
                     }
@@ -109,7 +108,7 @@ extension UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-        dismissKeyboard()
+       
         
     }
     

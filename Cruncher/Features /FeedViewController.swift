@@ -46,7 +46,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print                   ("Cancel finding post")
     }
     
-
     
     func findPosts() {
         let db = Firestore.firestore().collection("posts").limit(to: 50)
