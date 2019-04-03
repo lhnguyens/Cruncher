@@ -7,12 +7,14 @@
 //
 import Foundation
 import UIKit
+import Firebase
 
 class SetUpProfileViewController: UIViewController,  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
     var imagePicker = UIImagePickerController()
+    var userID: DocumentReference?
     
     
     override func viewDidLoad() {
