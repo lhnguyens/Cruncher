@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     var ref: DocumentReference? = nil
+    var userIDToSegue: String?
   
     
     override func viewDidLoad() {
@@ -39,6 +40,7 @@ class SignUpViewController: UIViewController {
                     } else {
                         data.userID = self.ref?.documentID
                         let convertedID = String(data.userID!)
+                        self.userIDToSegue = convertedID
                         let docs = Firestore.firestore().collection("users").document(convertedID)
                         docs.updateData(["ID": convertedID])
                         print("Account created and user is connected to database. UUID is: \(convertedID)")
@@ -51,6 +53,12 @@ class SignUpViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         signUpUser()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSetup" {
+            let vc = segue.destination  as! SetUpProfileViewController
+            vc.userID = userIDToSegue
+        }
     }
 }
 

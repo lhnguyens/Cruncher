@@ -299,6 +299,9 @@ Terms of Service and Privacy Policy</string>
                                 <rect key="frame" x="124" y="727" width="127" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="START!"/>
+                                <connections>
+                                    <action selector="setupCompleteButton:" destination="g8p-KC-C8Q" eventType="touchUpInside" id="BB4-C9-0pJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CRUNCHER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xn-eh-zjh">
                                 <rect key="frame" x="86" y="58" width="202" height="46"/>
@@ -313,6 +316,8 @@ Terms of Service and Privacy Policy</string>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="usa-Wi-SaG" id="mf8-nk-ydU"/>
+                        <outlet property="profileDescription" destination="Cnz-bj-BJg" id="Pf6-gy-8Mk"/>
+                        <outlet property="usernameField" destination="DFd-Ax-XGY" id="JcJ-z6-QPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGj-cS-2dy" userLabel="First Responder" sceneMemberID="firstResponder"/>

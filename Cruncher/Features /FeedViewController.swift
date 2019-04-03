@@ -26,8 +26,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         //        populateSamplePosts()
+       
         tableView.dataSource = self
         tableView.delegate = self
+       
         
 //        sampleReadDocumentId()
         

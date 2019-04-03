@@ -10,20 +10,80 @@ import UIKit
 import Firebase
 
 class SetUpProfileViewController: UIViewController,  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var profileDescription: UITextField!
     
     var imagePicker = UIImagePickerController()
-    var userID: DocumentReference?
+    var userID: String!
+    var db: Firestore!
+    var storage: Storage!
+    var imageName: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        db = Firestore.firestore()
+        storage = Storage.storage()
+        
+        
     }
     
-
+    func uploadUsername () {
+        let ref = db.collection("users").document(userID)
+        ref.updateData(["username": usernameField.text!])
+        print("Username added")
+        
+    }
+    
+    func uploadProfileDescription() {
+        let ref = db.collection("users").document(userID)
+        ref.updateData(["profileDescription": profileDescription.text!])
+    }
+    
+    func uploadProfileImage() {
+        guard let image: UIImage = imageView.image else {return}
+        imageName = UUID().uuidString
+        let storageRef = storage.reference().child("ProfileImageFolder")
+        let imageRef = storageRef.child(imageName!)
+        
+        let compressImage = image.jpegData(compressionQuality: 0.5)!
+        let uploadImage = imageRef.putData(compressImage, metadata: nil) { (query, error) in
+            print("Upload successful")
+            
+            imageRef.downloadURL { (url, error) in
+                if let error = error {
+                    print("Could not download URL \(error)")
+                } else {
+                    let downloadURL = url?.absoluteString
+                    print(downloadURL!)
+                    let ref = self.db.collection("users").document(self.userID)
+                    ref.updateData(["profilePicture": downloadURL!])
+                    print("URL attached to the users document!")
+                    self.dismiss(animated: true)
+                    
+                }
+            }
+            print(query ?? "No query")
+            print(error ?? "No error")
+        }
+        uploadImage.observe(.progress) { (snapshot) in
+            print(snapshot.progress ?? "No more progress")
+        }
+        uploadImage.resume()
+        dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    @IBAction func setupCompleteButton(_ sender: UIButton) {
+        uploadUsername()
+        uploadProfileDescription()
+        uploadProfileImage()
+    }
+    
     @IBAction func tapToChooseProfileImage(_ sender: Any) {
         let alert:UIAlertController=UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
@@ -54,12 +114,14 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        print("Image chosen!")
         imagePicker.dismiss(animated: true, completion: nil)
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("imagePickerController cancel")
+        print("Cancel choosing photo")
     }
     
-
+    
 }
