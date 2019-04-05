@@ -22,6 +22,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //Sample Array that contains the uploaded data to firebase
     var samplePostsUploaded = [Post]()
     
+    var testData: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewWillAppear(animated)
         findPosts()
         print("Finding Posts to show in feed")
+        print(testData)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

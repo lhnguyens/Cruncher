@@ -21,7 +21,6 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
     var storage: Storage!
     var imageName: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
@@ -61,7 +60,7 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
                     let ref = self.db.collection("users").document(self.userID)
                     ref.updateData(["profilePicture": downloadURL!])
                     print("URL attached to the users document!")
-                    self.dismiss(animated: true)
+//                    self.dismiss(animated: true)
                     
                 }
             }
@@ -72,9 +71,19 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
             print(snapshot.progress ?? "No more progress")
         }
         uploadImage.resume()
-        dismiss(animated: true, completion: nil)
         
         
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tabVC = segue.destination as? UITabBarController {
+            if let vc = tabVC.viewControllers!.first as? UINavigationController {
+                if let nextVC = vc.viewControllers.first as?  FeedViewController {
+                    nextVC.testData = "Success Segue"
+                }
+            }
+        }
     }
     
     
@@ -82,6 +91,8 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
         uploadUsername()
         uploadProfileDescription()
         uploadProfileImage()
+        performSegue(withIdentifier: "setupCompleteSegue", sender: self)
+        
     }
     
     @IBAction func tapToChooseProfileImage(_ sender: Any) {

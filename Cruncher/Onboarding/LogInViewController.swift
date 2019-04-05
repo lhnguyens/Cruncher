@@ -16,10 +16,16 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var loginView: UIView!
     let animation = Animation.named("4675-a-guakka-loader-for-foodvisor")
     
+    var auth: Auth!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startAnimation()
+        auth = Auth.auth()
+        
      
     }
     func startAnimation() {
