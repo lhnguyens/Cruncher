@@ -22,6 +22,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+   
+        
     }
     
     func signUpUser () {
@@ -60,6 +62,9 @@ class SignUpViewController: UIViewController {
             vc.userID = userIDToSegue
         }
     }
+    
+
+    
 }
 
 extension UIViewController {

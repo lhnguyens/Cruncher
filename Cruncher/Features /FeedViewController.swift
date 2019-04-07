@@ -23,10 +23,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var samplePostsUploaded = [Post]()
     
     var testData: String!
+    var auth: Auth!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //        populateSamplePosts()
+        auth = Auth.auth()
+        if let authorizedAuth =  auth.currentUser?.uid {
+            print(authorizedAuth)
+        }
+        else {
+            print("No current users")
+        }
        
         tableView.dataSource = self
         tableView.delegate = self

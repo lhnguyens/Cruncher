@@ -223,7 +223,7 @@ Terms of Service and Privacy Policy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDR-wW-y0s" customClass="DesignableView" customModule="Spring">
-                                <rect key="frame" x="16" y="136" width="343" height="547"/>
+                                <rect key="frame" x="16" y="136" width="343" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a username!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-Be-lgf">
@@ -287,6 +287,14 @@ Terms of Service and Privacy Policy</string>
                                             <action selector="tapToChooseProfileImage:" destination="g8p-KC-C8Q" eventType="touchUpInside" id="blY-5m-yhQ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIS-5l-Plo" customClass="RoundedButton" customModule="Cruncher" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="527" width="127" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="START!"/>
+                                        <connections>
+                                            <action selector="setupCompleteButton:" destination="g8p-KC-C8Q" eventType="touchUpInside" id="RvA-wt-8Fv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -295,14 +303,6 @@ Terms of Service and Privacy Policy</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIS-5l-Plo" customClass="RoundedButton" customModule="Cruncher" customModuleProvider="target">
-                                <rect key="frame" x="124" y="727" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="START!"/>
-                                <connections>
-                                    <action selector="setupCompleteButton:" destination="g8p-KC-C8Q" eventType="touchUpInside" id="RvA-wt-8Fv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CRUNCHER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xn-eh-zjh">
                                 <rect key="frame" x="86" y="58" width="202" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -376,7 +376,7 @@ Terms of Service and Privacy Policy</string>
                                             <color key="titleColor" red="0.77861589190000002" green="0.35114654899999997" blue="0.1489399374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jgR-H1-5uY" kind="show" id="PGI-Lv-5lZ"/>
+                                            <action selector="signInButton:" destination="k5t-iT-xmH" eventType="touchUpInside" id="2Qk-Hq-YuY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-ZN-HJX">
@@ -472,8 +472,11 @@ Terms of Service and Privacy Policy</string>
                         <viewLayoutGuide key="safeArea" id="gej-K1-JbA"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextfield" destination="Eqk-lR-6N7" id="HRb-CN-dth"/>
                         <outlet property="loginAnimation" destination="A6h-Lf-8kR" id="HcK-pd-9OE"/>
                         <outlet property="loginView" destination="ZmH-bZ-oIT" id="QGi-Cu-0gm"/>
+                        <outlet property="passwordTextfield" destination="FIf-9B-i1z" id="9qY-ph-Quj"/>
+                        <segue destination="jgR-H1-5uY" kind="show" identifier="loginSuccessSegue" id="l8g-ks-TF2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAb-Rv-Y3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -992,7 +995,7 @@ Terms of Service and Privacy Policy</string>
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PGI-Lv-5lZ"/>
+        <segue reference="rAb-OL-Ipv"/>
         <segue reference="dIC-Mw-E9z"/>
         <segue reference="hWb-gP-G0C"/>
     </inferredMetricsTieBreakers>
