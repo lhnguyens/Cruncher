@@ -38,6 +38,7 @@ class User {
                 "profileDescription": profileDescription!,
                 "username": username!,
                 "posts": posts!
+            
         ]
     }
 

@@ -34,18 +34,18 @@ class SignUpViewController: UIViewController {
                 self.showNotification(title: "Sign up failed, try a valid email or a password with more than 6 charachters!", message: "Please Try Again")
             } else {
                 print("\(String(describing: authResult?.user.email!)) created")
-                let db = Firestore.firestore().collection("users")
+                let userID: String = Auth.auth().currentUser!.uid
+                let db = Firestore.firestore().collection("users").document(userID)
                 let data: User = User(email: self.emailTextfield.text!, profilePicture: "", profileDescription: "", username: "", posts:[])
-                self.ref = db.addDocument(data: data.toAny()) { err in
+//                db(data: data.toAny()) { err in
+                db.setData(data.toAny()) { err in
                     if let err = err {
                         print("Error trying to create document \(err)")
                     } else {
-                        data.userID = self.ref?.documentID
-                        let convertedID = String(data.userID!)
-                        self.userIDToSegue = convertedID
-                        let docs = Firestore.firestore().collection("users").document(convertedID)
-                        docs.updateData(["ID": convertedID])
-                        print("Account created and user is connected to database. UUID is: \(convertedID)")
+                        print("Success saving to firestore")
+                        let docs = Firestore.firestore().collection("users").document(userID)
+                        docs.updateData(["ID": userID])
+                        print("Account created and user is connected to database. UUID is: \(userID)")
                         self.performSegue(withIdentifier: "goToSetup", sender: self)
                     }
                 }
@@ -58,8 +58,9 @@ class SignUpViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSetup" {
+            let userID = Auth.auth().currentUser?.uid
             let vc = segue.destination  as! SetUpProfileViewController
-            vc.userID = userIDToSegue
+            vc.userID = userID
         }
     }
     

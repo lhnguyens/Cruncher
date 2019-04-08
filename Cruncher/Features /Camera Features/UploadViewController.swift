@@ -51,6 +51,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     
     
     func uploadImageToStorageAndCreatePost () {
+        findUsername()
         imageFileName = UUID().uuidString
         let storage = Storage.storage()
         let storageRef = storage.reference().child("PhotosUploaded")
@@ -68,7 +69,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
                     if let url = url {
                         let downloadURL = url.absoluteString
                         let db = Firestore.firestore().collection("posts")
-                        let uploadingPost = Post(user: "Steve.Test", description: self.descriptionTextField.text!, likes: 1, imageURL: downloadURL)
+                        let uploadingPost = Post(user: self.username!, description: self.descriptionTextField.text!, likes: 1, imageURL: downloadURL)
                         db.addDocument(data: uploadingPost.toAny())
                         print("Posts added to firebase with url for image")
                         self.dismiss(animated: true)
@@ -96,6 +97,23 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     }
     @objc func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y += 150
+    }
+    
+    func findUsername () {
+    
+        guard let userID = Auth.auth().currentUser?.uid else {return}
+        let db = Firestore.firestore()
+        let query = db.collection("users").document(userID)
+        query.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching username. Error: \(error)")
+            } else {
+                let documentData = document?.data()?["username"]  as? String
+                self.username = documentData
+            }
+            
+        }
+        
     }
     
     
