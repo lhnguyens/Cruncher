@@ -100,7 +100,6 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     }
     
     func findUsername () {
-    
         guard let userID = Auth.auth().currentUser?.uid else {return}
         let db = Firestore.firestore()
         let query = db.collection("users").document(userID)
@@ -115,9 +114,6 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
-    
-    
 }
 
 

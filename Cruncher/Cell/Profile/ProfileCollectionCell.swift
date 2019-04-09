@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import SDWebImage
 
 class ProfileCollectionCell: UICollectionViewCell {
     

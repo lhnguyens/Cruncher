@@ -25,8 +25,8 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
         super.viewDidLoad()
         db = Firestore.firestore()
         storage = Storage.storage()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         hideKeyboardWhenTappedAround()
         
         
@@ -63,7 +63,7 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
                     let ref = self.db.collection("users").document(self.userID)
                     ref.updateData(["profilePicture": downloadURL!])
                     print("URL attached to the users document!")
-//                    self.dismiss(animated: true)
+                    //                    self.dismiss(animated: true)
                     
                 }
             }
@@ -137,12 +137,12 @@ class SetUpProfileViewController: UIViewController,  UINavigationControllerDeleg
         print("Cancel choosing photo")
     }
     
-    @objc func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y -= 150
-    }
-    @objc func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y += 150
-    }
+    //    @objc func keyboardWillShow(sender: NSNotification) {
+    //        self.view.frame.origin.y -= 150
+    //    }
+    //    @objc func keyboardWillHide(sender: NSNotification) {
+    //        self.view.frame.origin.y += 150
+    //    }
     
     
     

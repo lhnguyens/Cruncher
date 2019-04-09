@@ -900,7 +900,9 @@ Terms of Service and Privacy Policy</string>
                     <navigationItem key="navigationItem" title="Your Profile" id="zFL-Qo-Hwc"/>
                     <connections>
                         <outlet property="collectionView" destination="iD7-vY-N92" id="cBe-Sb-9hg"/>
+                        <outlet property="profileBio" destination="11P-yQ-MjL" id="hj0-vf-3kU"/>
                         <outlet property="profileImage" destination="FG0-qI-ybP" id="Sr4-fJ-yvW"/>
+                        <outlet property="usernameLabel" destination="K9p-hw-KQ6" id="3jk-ww-8ya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqL-x9-8yT" userLabel="First Responder" sceneMemberID="firstResponder"/>

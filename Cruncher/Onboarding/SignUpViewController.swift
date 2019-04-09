@@ -16,13 +16,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     var ref: DocumentReference? = nil
-    var userIDToSegue: String?
-  
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-   
+        
         
     }
     
@@ -37,7 +37,6 @@ class SignUpViewController: UIViewController {
                 let userID: String = Auth.auth().currentUser!.uid
                 let db = Firestore.firestore().collection("users").document(userID)
                 let data: User = User(email: self.emailTextfield.text!, profilePicture: "", profileDescription: "", username: "", posts:[])
-//                db(data: data.toAny()) { err in
                 db.setData(data.toAny()) { err in
                     if let err = err {
                         print("Error trying to create document \(err)")
@@ -64,7 +63,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-
+    
     
 }
 
