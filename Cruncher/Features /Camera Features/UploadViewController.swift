@@ -29,8 +29,6 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
         configureTextField()
         self.hideKeyboardWhenTappedAround()
         
-        
-        
         dismissKeyboard()
     }
     
@@ -67,12 +65,19 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
                     print("Could not download URL \(error)")
                 } else {
                     if let url = url {
+                        let postid = Auth.auth().currentUser?.uid
                         let downloadURL = url.absoluteString
                         let db = Firestore.firestore().collection("posts")
-                        let uploadingPost = Post(user: self.username!, description: self.descriptionTextField.text!, likes: 1, imageURL: downloadURL)
+//
+                    
+                        let uploadingPost = Post(user: self.username!, description: self.descriptionTextField.text!,
+                                                 likes: 0, imageURL: downloadURL, postUserID: postid!, date: Date())
+                        
                         db.addDocument(data: uploadingPost.toAny())
                         print("Posts added to firebase with url for image")
-                        self.dismiss(animated: true)
+                        self.navigationController?.popViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
+                        
                         
                     }
                 }
@@ -84,6 +89,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
             print(snapshot.progress ?? "No more progress")
         }
         uploadImage.resume()
+        self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         
     }
@@ -116,13 +122,12 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-       
+        
         
     }
     

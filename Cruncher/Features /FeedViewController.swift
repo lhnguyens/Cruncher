@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    var indexPathForLike: Post?
     
     //array that holds the value for posts uploaded for tableview to retrieve from.
     var postsData: [Post] = []
@@ -40,9 +41,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
        
         
-//        sampleReadDocumentId()
-        
-        
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,11 +61,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func findPosts() {
         let db = Firestore.firestore().collection("posts").limit(to: 50)
-        postListener = db.addSnapshotListener { (querySnapshot, error) in
+        postListener = db.order(by:"timestamp", descending: true).addSnapshotListener { (querySnapshot, error) in
             if let error = error {
                 print("Error when trying to load posts: \(error)")
             } else {
-                //Clear the array before calling method again when going back into the view in order to avoid duplicates of data.
+             
                self.postsData.removeAll()
                 if let querySnapshot = querySnapshot {
                     for document in querySnapshot.documents {
@@ -74,7 +74,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         let description = data["description"] as? String ?? ""
                         let likes = data["likes"] as? Int ?? 0
                         let imageURL = data["imageURL"] as? String ?? ""
-                        let newPosts = Post(user: user, description: description, likes: likes, imageURL: imageURL)
+                        let postID = data["postUserID"] as? String ?? ""
+                        guard let timestamp = data["timestamp"] as? Timestamp else {return}
+                        let date = timestamp.dateValue()
+                        let newPosts = Post(user: user, description: description, likes: likes, imageURL: imageURL, postUserID: postID, date: date)
                         self.postsData.append(newPosts)
                     }
                 }
@@ -90,6 +93,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("stop listening")
     }
     
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  postsData.count
@@ -99,6 +103,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         let newPosts = postsData[indexPath.row]
+        indexPathForLike = postsData[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
         cell.populatePosts(post: newPosts)
         return cell
@@ -113,50 +119,3 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 }
 
-
-//    func populateSamplePosts() {
-//
-//        let db = Firestore.firestore().collection("posts")
-//
-//        let sampleUserOne =     Post(user: "sampleUserOne", description: "Test 1", likes: 1)
-//        let sampleUserTwo =     Post(user: "sampleUserTwo", description: "Test 2", likes: 2)
-//        let sampleUserThree =   Post(user: "sampleUserThree", description: "Test 3", likes: 3)
-//        let sampleUserFour =    Post(user: "sampleUserFour", description: "Test 4", likes: 4)
-//        let sampleUserFive =    Post(user: "sampleUserFive", description: "Test 5", likes: 5)
-//        let sampleUserSix =     Post(user: "sampleUserSix", description: "Test 6", likes: 6)
-//        let sampleUserSeven =   Post(user: "sampleUserSeven", description: "Test 7", likes: 7)
-//        let sampleUserEight =   Post(user: "sampleUserEight", description: "Test 8", likes: 8)
-//        let sampleUserNine =    Post(user: "sampleUserNine", description: "Test 9", likes: 9)
-//        let sampleUserTen =     Post(user: "sampleUserTen", description: "Test 10", likes: 10)
-//
-//        samplePostsUploaded.append(sampleUserOne)
-//        samplePostsUploaded.append(sampleUserTwo)
-//        samplePostsUploaded.append(sampleUserThree)
-//        samplePostsUploaded.append(sampleUserFour)
-//        samplePostsUploaded.append(sampleUserFive)
-//        samplePostsUploaded.append(sampleUserSix)
-//        samplePostsUploaded.append(sampleUserSeven)
-//        samplePostsUploaded.append(sampleUserEight)
-//        samplePostsUploaded.append(sampleUserNine)
-//        samplePostsUploaded.append(sampleUserTen)
-//
-//        for item in samplePostsUploaded  {
-//            db.addDocument(data: item.toAny())
-//        }
-//    }
-
-//    func sampleReadDocumentId() {
-//        let baseQuery = Firestore.firestore().collection("posts").limit(to: 3).whereField("likes", isEqualTo: 7)
-//        baseQuery.getDocuments() { (snapShot, error) in
-//
-//            if let error = error {
-//                print("\(error)")
-//            } else {
-//                guard let snapShot = snapShot else { return }
-//                for documents in snapShot.documents {
-//                    print("Successfully retreived document id for: \(documents.documentID)")
-//                }
-//            }
-//
-//        }
-//    }

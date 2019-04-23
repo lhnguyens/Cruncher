@@ -78,6 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="n4L-c8-6OI" id="d76-Xt-9Jz"/>
+                        <segue destination="jgR-H1-5uY" kind="show" identifier="goDirectToApp" id="3LL-hl-V39"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -535,7 +536,7 @@ Terms of Service and Privacy Policy</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-jO-W8l">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-jO-W8l">
                                                             <rect key="frame" x="0.0" y="52" width="356" height="179"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePictureUser1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-Ot-eNK">
@@ -581,24 +582,34 @@ Terms of Service and Privacy Policy</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-UN-OMe">
+                                                            <rect key="frame" x="219" y="18" width="129" height="21"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="w20-lr-OpW" firstAttribute="leading" secondItem="DzD-9p-0Go" secondAttribute="leading" constant="78" id="01S-18-omy"/>
                                                         <constraint firstItem="e2r-jO-W8l" firstAttribute="centerY" secondItem="DzD-9p-0Go" secondAttribute="centerY" constant="-5.5" id="4P4-u2-dyw"/>
                                                         <constraint firstAttribute="bottom" secondItem="cdU-aQ-9Zn" secondAttribute="bottom" constant="13" id="FYV-HI-jQB"/>
+                                                        <constraint firstItem="jiL-UN-OMe" firstAttribute="trailing" secondItem="DzD-9p-0Go" secondAttribute="trailingMargin" id="G83-E5-740"/>
                                                         <constraint firstItem="w20-lr-OpW" firstAttribute="top" secondItem="DzD-9p-0Go" secondAttribute="top" constant="18" id="I0m-nC-uFM"/>
                                                         <constraint firstItem="cdU-aQ-9Zn" firstAttribute="leading" secondItem="VEc-MB-Kfe" secondAttribute="trailing" constant="11" id="JDs-JH-dcf"/>
                                                         <constraint firstItem="Q2U-Ot-eNK" firstAttribute="leading" secondItem="DzD-9p-0Go" secondAttribute="leading" constant="15" id="JbG-GK-UYn"/>
                                                         <constraint firstItem="fTx-sd-ifn" firstAttribute="top" secondItem="e2r-jO-W8l" secondAttribute="bottom" constant="9" id="McD-J5-PZL"/>
+                                                        <constraint firstItem="jiL-UN-OMe" firstAttribute="leading" secondItem="w20-lr-OpW" secondAttribute="trailing" id="Nj2-iw-pwE"/>
                                                         <constraint firstItem="e2r-jO-W8l" firstAttribute="top" secondItem="w20-lr-OpW" secondAttribute="bottom" constant="13" id="QXv-5U-54j"/>
                                                         <constraint firstItem="Q2U-Ot-eNK" firstAttribute="top" secondItem="DzD-9p-0Go" secondAttribute="top" constant="8" id="QvV-TG-BbD"/>
                                                         <constraint firstAttribute="trailing" secondItem="fTx-sd-ifn" secondAttribute="trailing" constant="109" id="SAh-pe-bRG"/>
                                                         <constraint firstItem="VEc-MB-Kfe" firstAttribute="top" secondItem="e2r-jO-W8l" secondAttribute="bottom" constant="13" id="Um7-0s-TPm"/>
                                                         <constraint firstAttribute="trailing" secondItem="cdU-aQ-9Zn" secondAttribute="trailing" constant="21" id="YoZ-2X-jNq"/>
                                                         <constraint firstAttribute="width" constant="356" id="beQ-fw-UH2"/>
+                                                        <constraint firstItem="jiL-UN-OMe" firstAttribute="bottom" secondItem="w20-lr-OpW" secondAttribute="bottom" id="bto-tl-7rV"/>
                                                         <constraint firstItem="fTx-sd-ifn" firstAttribute="leading" secondItem="DzD-9p-0Go" secondAttribute="leading" constant="15" id="fpe-Ql-Owr"/>
                                                         <constraint firstAttribute="trailing" secondItem="e2r-jO-W8l" secondAttribute="trailing" id="iBH-NP-eFD"/>
+                                                        <constraint firstItem="jiL-UN-OMe" firstAttribute="top" secondItem="w20-lr-OpW" secondAttribute="top" id="mms-23-mAd"/>
                                                         <constraint firstAttribute="width" secondItem="DzD-9p-0Go" secondAttribute="height" multiplier="305:254" constant="2.9685039370078243" id="nZ8-EP-Idr"/>
                                                         <constraint firstItem="e2r-jO-W8l" firstAttribute="leading" secondItem="DzD-9p-0Go" secondAttribute="leading" id="ruG-SN-6us"/>
                                                         <constraint firstItem="cdU-aQ-9Zn" firstAttribute="leading" secondItem="VEc-MB-Kfe" secondAttribute="trailing" constant="11" id="zP5-1B-ud5"/>
@@ -620,6 +631,7 @@ Terms of Service and Privacy Policy</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="createdAtLabel" destination="jiL-UN-OMe" id="NqK-zg-VMa"/>
                                             <outlet property="descriptionBox" destination="fTx-sd-ifn" id="7vC-6n-ay4"/>
                                             <outlet property="likeButton" destination="VEc-MB-Kfe" id="9Zp-5X-vA9"/>
                                             <outlet property="likesLabel" destination="cdU-aQ-9Zn" id="JEi-dV-aEz"/>
@@ -997,8 +1009,8 @@ Terms of Service and Privacy Policy</string>
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rAb-OL-Ipv"/>
+        <segue reference="3LL-hl-V39"/>
         <segue reference="dIC-Mw-E9z"/>
-        <segue reference="hWb-gP-G0C"/>
+        <segue reference="YT3-eF-Z6e"/>
     </inferredMetricsTieBreakers>
 </document>

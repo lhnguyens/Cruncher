@@ -14,8 +14,6 @@ import SDWebImage
 class ProfileCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var profileImageInCollection: UIImageView!
-    
-    
     func setImageInProfileFeed(image: ProfileModels) {
         profileImageInCollection.image = UIImage(named: image.uploadedImageInProfileFeed)
     }

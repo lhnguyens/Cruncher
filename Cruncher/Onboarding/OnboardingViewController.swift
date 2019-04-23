@@ -8,17 +8,32 @@
 
 import UIKit
 import Lottie
+import Firebase
 
 class OnboardingViewController: UIViewController {
     @IBOutlet weak var animationView: AnimationView!
     let animation = Animation.named("32-camera")
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    startAnimation()
+        startAnimation()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let auth = Auth.auth()
+
+        if let user = auth.currentUser {
+            performSegue(withIdentifier: "goDirectToApp", sender: user)
+            } else {
+            print("No current user")
+        }
+
+    
     }
     
     func startAnimation() {

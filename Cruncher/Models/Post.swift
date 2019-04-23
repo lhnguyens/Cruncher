@@ -8,18 +8,24 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class Post {
     var user: String?
     var description: String?
     var likes: Int?
     var imageURL: String?
+    var postUserID: String?
+    var createdAt: Date?
     
-    init(user: String, description: String, likes: Int, imageURL: String) {
+    
+    init(user: String, description: String, likes: Int, imageURL: String, postUserID: String, date: Date) {
         self.user = user
         self.description = description
         self.likes = likes
         self.imageURL = imageURL
+        self.postUserID = postUserID
+        self.createdAt = date //Date(timeIntervalSince1970: timestamp/1000)
     }
     
     func toAny() -> [String: Any] {
@@ -27,7 +33,9 @@ class Post {
         return ["user": user!,
                 "description": description!,
                 "likes": likes!,
-                "imageURL": imageURL!
+                "imageURL": imageURL!,
+                "postUserID": postUserID!,
+                "timestamp": createdAt!
         ]
     }
 }
