@@ -31,11 +31,12 @@ class FeedCell: UITableViewCell {
         userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
 //        guard let urlFound = urlForProfileImage else {return}
         profileImageViewInFeed.sd_setImage(with: URL(string: post.profileImage!), placeholderImage: UIImage(named: "StorageTestImage"))
+        likeButton.isSelected = post.checked
     }
     
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
-        likeButton.isSelected = !likeButton.isSelected
+        
     }
     
 //    func fetchingProfilePicture () {

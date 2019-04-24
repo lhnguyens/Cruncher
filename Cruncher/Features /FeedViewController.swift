@@ -107,11 +107,29 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         indexPathForLike = postsData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
-        
         cell.populatePosts(post: newPosts)
+        cell.selectionStyle = .none
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(checkMarkButtonClicked(sender: )), for: .touchUpInside)
         return cell
+    
         
     }
+    
+    
+    @objc func checkMarkButtonClicked (sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseInOut, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (success) in
+            self.postsData[sender.tag].checked = !(self.postsData[sender.tag].checked)
+            sender.isSelected = !sender.isSelected
+            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseInOut, animations: {
+                sender.transform = .identity
+            }, completion: nil)
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return UITableView.automaticDimension
@@ -121,3 +139,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 }
 
+}
+
+}

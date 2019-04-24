@@ -18,6 +18,8 @@ class Post {
     var postUserID: String?
     var createdAt: Date?
     var profileImage: String?
+    var checked: Bool = false
+
     
     
     

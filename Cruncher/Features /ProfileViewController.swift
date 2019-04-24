@@ -18,9 +18,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var profileBio: UILabel!
     
     
-    var profileFeed: [ProfileModels] = []
+//    var profileFeed = [ProfileModels]()
     var db: Firestore!
     var auth: Auth!
+    var arrayForUrl = [String]()
     
     
     
@@ -29,15 +30,19 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         auth = Auth.auth()
         db = Firestore.firestore()
+       
         fetchProfileImageAndSetIt()
         fetchProfileDescription()
         fetchUsername()
-        profileFeed = createArrayForProfileFeed()
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        findUserPostImages()
+    }
+   
     
     func fetchProfileImageAndSetIt () {
         //Fetch url
@@ -56,8 +61,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func fetchProfileDescription () {
-        guard let userID = auth.currentUser?.uid else {return}
-        let query = db.collection("users").document(userID)
+        let userID = auth.currentUser?.uid
+        let query = db.collection("users").document(userID!)
         query.addSnapshotListener { (document, error) in
             if let error = error {
                 print("There was an error fetching the profile description: \(error)")
@@ -100,25 +105,37 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.present(startVC, animated: true, completion: nil)
     }
     
-    
-    func createArrayForProfileFeed() -> [ProfileModels] {
-        let photo1 = ProfileModels(uploadedImageInProfileFeed: "SalmonDish")
-        let photo2 = ProfileModels(uploadedImageInProfileFeed: "steak")
-        let photo3 = ProfileModels(uploadedImageInProfileFeed: "pizza")
-        let photo4 = ProfileModels(uploadedImageInProfileFeed: "burger")
-        
-        return  [photo1, photo2, photo3, photo4]
+    func findUserPostImages () {
+        guard let userID = auth.currentUser?.uid else {return}
+        let query = db.collection("posts").whereField("postUserID", isEqualTo: userID)
+        query.order(by:"timestamp", descending: true).addSnapshotListener() { (query, error) in
+            if let error = error {
+                print("Error profile: \(error)")
+            } else {
+                if let query = query {
+                    self.arrayForUrl.removeAll()
+                    for docs in query.documents {
+                        let data = docs.data()
+                        let url = data["imageURL"] as? String ?? ""
+                        print(url)
+                        self.arrayForUrl.append(url)
+                        
+                    }
+                }
+                self.collectionView.reloadData()
+            }
+        }
     }
     
+  
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profileFeed.count
+        return arrayForUrl.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let dataStructure = profileFeed[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCollectionCell", for: indexPath) as! ProfileCollectionCell
-        cell.setImageInProfileFeed(image: dataStructure)
+        cell.profileImageInCollection.sd_setImage(with: URL(string: arrayForUrl[indexPath.row]), placeholderImage: UIImage(named: "steak"))
         return cell
         
     }
