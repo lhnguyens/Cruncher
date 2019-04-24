@@ -77,7 +77,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         let postID = data["postUserID"] as? String ?? ""
                         guard let timestamp = data["timestamp"] as? Timestamp else {return}
                         let date = timestamp.dateValue()
-                        let newPosts = Post(user: user, description: description, likes: likes, imageURL: imageURL, postUserID: postID, date: date)
+                        let profileURL = data["profileImage"] as? String ?? ""
+                        let newPosts = Post(user: user, description: description, likes: likes, imageURL: imageURL, postUserID: postID, date: date, profileImage: profileURL)
                         self.postsData.append(newPosts)
                     }
                 }
@@ -106,6 +107,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         indexPathForLike = postsData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
+        
         cell.populatePosts(post: newPosts)
         return cell
         

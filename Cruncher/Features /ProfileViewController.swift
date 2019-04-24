@@ -84,6 +84,21 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             
         }
     }
+    @IBAction func signingOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        }
+            
+        catch let signOutError as NSError {
+            
+            print("There was an error signing out \(signOutError)")
+            
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let startVC = storyboard.instantiateViewController(withIdentifier: "StartVC")
+        self.present(startVC, animated: true, completion: nil)
+    }
     
     
     func createArrayForProfileFeed() -> [ProfileModels] {

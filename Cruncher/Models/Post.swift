@@ -17,15 +17,20 @@ class Post {
     var imageURL: String?
     var postUserID: String?
     var createdAt: Date?
+    var profileImage: String?
     
     
-    init(user: String, description: String, likes: Int, imageURL: String, postUserID: String, date: Date) {
+    
+    
+    init(user: String, description: String, likes: Int, imageURL: String, postUserID: String, date: Date, profileImage: String) {
+        
         self.user = user
         self.description = description
         self.likes = likes
         self.imageURL = imageURL
         self.postUserID = postUserID
         self.createdAt = date //Date(timeIntervalSince1970: timestamp/1000)
+        self.profileImage = profileImage
     }
     
     func toAny() -> [String: Any] {
@@ -35,7 +40,10 @@ class Post {
                 "likes": likes!,
                 "imageURL": imageURL!,
                 "postUserID": postUserID!,
-                "timestamp": createdAt!
+                "timestamp": createdAt!,
+                "profileImage": profileImage!
         ]
     }
+    
+    
 }

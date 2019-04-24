@@ -11,7 +11,7 @@ import SDWebImage
 import Firebase
 
 class FeedCell: UITableViewCell {
-
+    
     @IBOutlet weak var userNameInFeedLabel: UILabel!
     @IBOutlet weak var profileImageViewInFeed: UIImageView!
     @IBOutlet weak var userUploadImageView: UIImageView!
@@ -21,40 +21,43 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var createdAtLabel: UILabel!
     
     
-    var urlForProfilePicture: String?
-    
-    
+//    var urlForProfileImage : String?
     
     func populatePosts(post: Post) {
-        findUserProfileImage()
         userNameInFeedLabel.text = post.user
         descriptionBox.text = post.description
-        userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
-        guard let urlFound = urlForProfilePicture else {return}
-        profileImageViewInFeed.sd_setImage(with: URL(string: urlFound), placeholderImage: UIImage(named: "StorageTestImage"))
         likesLabel.text = String(post.likes!)
         createdAtLabel.text = post.createdAt!.calenderTimeSinceNow()
+        userUploadImageView.sd_setImage(with: URL(string: post.imageURL!), placeholderImage: UIImage(named: "StorageTestImage"))
+//        guard let urlFound = urlForProfileImage else {return}
+        profileImageViewInFeed.sd_setImage(with: URL(string: post.profileImage!), placeholderImage: UIImage(named: "StorageTestImage"))
     }
     
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
         likeButton.isSelected = !likeButton.isSelected
     }
-
-    func findUserProfileImage() {
-        let auth = Auth.auth().currentUser?.uid
-        let db = Firestore.firestore().collection("users").document(auth!)
-        db.getDocument() { (query, error) in
-            if let error = error {
-                print("Error fetching user profile picture: \(error)")
-            } else {
-                let data = query?.data()
-                let url = data!["profilePicture"] as? String ?? ""
-                self.urlForProfilePicture = url
-            }
-
-        }
-    }
-
-  
+    
+//    func fetchingProfilePicture () {
+//        let db = Firestore.firestore().collection("posts").whereField("profileImage", isEqualTo: true)
+//        db.getDocuments() { (querySnapshot, error) in
+//            if let error = error {
+//                print("Error: FeedCell \(error)")
+//            } else
+//            {
+//                if let query = querySnapshot {
+//                    for docs in query.documents {
+//                        let data = docs.data()
+//                        let urlForProfile = data["profileImage"] as? String ?? ""
+//                        self.urlForProfileImage = urlForProfile
+//                        print("fetch successful")
+//                    }
+//                }
+//            }
+//
+//        }
+//    }
+    
+    
+   
 }

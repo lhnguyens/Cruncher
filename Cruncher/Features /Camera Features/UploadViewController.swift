@@ -15,6 +15,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
     var capturedImageToUpload: UIImage?
     var username: String?
     var imageFileName: String?
+    var profileImageFetchedAndToBeUploaded: String?
     
     
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -47,9 +48,27 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
         uploadImageToStorageAndCreatePost()
     }
     
+    func uploadProfileImage() {
+        let auth = Auth.auth().currentUser?.uid
+        let db = Firestore.firestore().collection("users").document(auth!)
+        db.getDocument() { (query, error) in
+            if let error = error {
+                print("error \(error)")
+            } else {
+                if let query = query {
+                    let data = query.data()
+                    let profileImageUrl = data!["profilePicture"] as? String ?? ""
+                    self.profileImageFetchedAndToBeUploaded = profileImageUrl
+                }
+            }
+            
+        }
+    }
+    
     
     func uploadImageToStorageAndCreatePost () {
         findUsername()
+        uploadProfileImage()
         imageFileName = UUID().uuidString
         let storage = Storage.storage()
         let storageRef = storage.reference().child("PhotosUploaded")
@@ -71,8 +90,7 @@ class UploadViewController: UIViewController, UITextFieldDelegate {
 //
                     
                         let uploadingPost = Post(user: self.username!, description: self.descriptionTextField.text!,
-                                                 likes: 0, imageURL: downloadURL, postUserID: postid!, date: Date())
-                        
+                                                 likes: 0, imageURL: downloadURL, postUserID: postid!, date: Date(), profileImage: self.profileImageFetchedAndToBeUploaded!)
                         db.addDocument(data: uploadingPost.toAny())
                         print("Posts added to firebase with url for image")
                         self.navigationController?.popViewController(animated: true)

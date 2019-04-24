@@ -13,7 +13,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Cruncher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Cruncher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +519,7 @@ Terms of Service and Privacy Policy</string>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="316" id="ayV-SQ-cJu" customClass="FeedCell" customModule="Cruncher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="316"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayV-SQ-cJu" id="1fb-hR-lyM">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayV-SQ-cJu" id="1fb-hR-lyM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -909,7 +909,14 @@ Terms of Service and Privacy Policy</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z7Z-YH-Nbq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Profile" id="zFL-Qo-Hwc"/>
+                    <navigationItem key="navigationItem" title="Your Profile" id="zFL-Qo-Hwc">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="XyH-a1-JZ5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signingOut:" destination="Byv-Q2-GkA" id="yW5-0u-g81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="iD7-vY-N92" id="cBe-Sb-9hg"/>
                         <outlet property="profileBio" destination="11P-yQ-MjL" id="hj0-vf-3kU"/>
@@ -1009,7 +1016,7 @@ Terms of Service and Privacy Policy</string>
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3LL-hl-V39"/>
+        <segue reference="rAb-OL-Ipv"/>
         <segue reference="dIC-Mw-E9z"/>
         <segue reference="YT3-eF-Z6e"/>
     </inferredMetricsTieBreakers>
