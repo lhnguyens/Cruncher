@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Cruncher
+
+  Created by Luan Nguyen on 2019-04-25.
+  Copyright © 2019 Luan Nguyen. All rights reserved.
+*/
+
+"1" = "1 år sedan";
+"2" = "år sedan";
+"3" = "1 månad sedan";
+"4" = "månader sedan";
+"5" = "1 vecka sen";
+"6" = "veckor sen";
+
+"7" = "1 dag sen";
+"8" = "dagar sen";
+"9" = "1 timme sen";
+"10" = "timmar sen";
+"11" = "1 minut sen";
+"12" = "minuter sedan";
+"13" = "1 sekund sen";
+"14" = "sekunder sen";

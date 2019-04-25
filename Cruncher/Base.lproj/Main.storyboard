@@ -519,7 +519,7 @@ Terms of Service and Privacy Policy</string>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="316" id="ayV-SQ-cJu" customClass="FeedCell" customModule="Cruncher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="316"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayV-SQ-cJu" id="1fb-hR-lyM">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayV-SQ-cJu" id="1fb-hR-lyM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -536,7 +536,7 @@ Terms of Service and Privacy Policy</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-jO-W8l">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-jO-W8l">
                                                             <rect key="frame" x="0.0" y="52" width="356" height="179"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePictureUser1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-Ot-eNK">
@@ -579,7 +579,7 @@ Terms of Service and Privacy Policy</string>
                                                                 <constraint firstAttribute="width" secondItem="cdU-aQ-9Zn" secondAttribute="height" multiplier="14:17" id="eOt-Ha-qGZ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-UN-OMe">
@@ -817,7 +817,7 @@ Terms of Service and Privacy Policy</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="148" height="143"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SalmonDish" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-t1-3bN">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SalmonDish" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-t1-3bN">
                                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -846,7 +846,7 @@ Terms of Service and Privacy Policy</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives in Stockholm! Fika is best!  #kanelbullar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11P-yQ-MjL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives in Stockholm! Fika is best!  #kanelbullar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11P-yQ-MjL">
                                         <rect key="frame" x="48" y="226" width="247" height="68"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="11P-yQ-MjL" secondAttribute="height" multiplier="247:68" id="REV-uE-7wi"/>

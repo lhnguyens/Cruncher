@@ -1,0 +1,123 @@
+
+/* Class = "UILabel"; text = "Choose Profile Image"; ObjectID = "0K9-V5-NWf"; */
+"0K9-V5-NWf.text" = "Välj Profil Bild";
+
+/* Class = "UILabel"; text = "Lives in Stockholm! Fika is best!  #kanelbullar"; ObjectID = "11P-yQ-MjL"; */
+"11P-yQ-MjL.text" = "Lives in Stockholm! Fika is best!  #kanelbullar";
+
+/* Class = "UILabel"; text = "CRUNCHER"; ObjectID = "3Xn-eh-zjh"; */
+"3Xn-eh-zjh.text" = "CRUNCHER";
+
+/* Class = "UILabel"; text = "Latest Foodies!"; ObjectID = "80L-ut-TZA"; */
+"80L-ut-TZA.text" = "Senaste Bilder!";
+
+/* Class = "UINavigationItem"; title = "Feed"; ObjectID = "9iv-h9-3QI"; */
+"9iv-h9-3QI.title" = "Inlägg";
+
+/* Class = "UIButton"; normalTitle = "Press to choose"; ObjectID = "E1Z-4M-1PY"; */
+"E1Z-4M-1PY.normalTitle" = "Tryck för att välja!";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "EqR-yz-bfp"; */
+"EqR-yz-bfp.normalTitle" = "Logga In";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Eqk-lR-6N7"; */
+"Eqk-lR-6N7.placeholder" = "E-post";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "FIf-9B-i1z"; */
+"FIf-9B-i1z.placeholder" = "Lösenorder";
+
+/* Class = "UILabel"; text = "CRUNCHER"; ObjectID = "Fea-av-1sb"; */
+"Fea-av-1sb.text" = "CRUNCHER";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password "; ObjectID = "Ikx-8j-2ba"; */
+"Ikx-8j-2ba.normalTitle" = "Glömt Lösenord? ";
+
+/* Class = "UILabel"; text = "Emily Kaze"; ObjectID = "K9p-hw-KQ6"; */
+"K9p-hw-KQ6.text" = "Emily Kaze";
+
+/* Class = "UILabel"; text = "CRUNCHER"; ObjectID = "ME2-cv-QQy"; */
+"ME2-cv-QQy.text" = "CRUNCHER";
+
+/* Class = "UIButton"; normalTitle = "START!"; ObjectID = "NIS-5l-Plo"; */
+"NIS-5l-Plo.normalTitle" = "Starta!";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "SrP-pq-LN6"; */
+"SrP-pq-LN6.title" = "Nästa";
+
+/* Class = "UIViewController"; title = "Post Your Image"; ObjectID = "Tcw-2a-hbN"; */
+"Tcw-2a-hbN.title" = "Dela din bild!";
+
+/* Class = "UITabBarItem"; title = "Feed"; ObjectID = "VNM-ZO-IJb"; */
+"VNM-ZO-IJb.title" = "Inlägg";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "VT4-fN-Pjs"; */
+"VT4-fN-Pjs.text" = "Beskrivning";
+
+/* Class = "UIBarButtonItem"; title = "Sign Out"; ObjectID = "XyH-a1-JZ5"; */
+"XyH-a1-JZ5.title" = "Logga ut";
+
+/* Class = "UILabel"; text = "Write something about you"; ObjectID = "Y10-86-l9M"; */
+"Y10-86-l9M.text" = "Skriv något om dig själv!";
+
+/* Class = "UITextField"; placeholder = "Write your description"; ObjectID = "Z3t-FF-nAO"; */
+"Z3t-FF-nAO.placeholder" = "Skriv något om dig själv!";
+
+/* Class = "UINavigationItem"; title = "Camera"; ObjectID = "ZsB-7b-fMb"; */
+"ZsB-7b-fMb.title" = "Kamera";
+
+/* Class = "UIButton"; normalTitle = "Dont Have One? Create Now!"; ObjectID = "a8w-ZN-HJX"; */
+"a8w-ZN-HJX.normalTitle" = "Ingen konto? Skapa en nu!";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "aNg-LC-Nuv"; */
+"aNg-LC-Nuv.normalTitle" = "Registrera konto!";
+
+/* Class = "UITabBarItem"; title = "Camera"; ObjectID = "boZ-c5-UPW"; */
+"boZ-c5-UPW.title" = "Kamera";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "cdU-aQ-9Zn"; */
+"cdU-aQ-9Zn.text" = "12";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "dm6-Fr-TgU"; */
+"dm6-Fr-TgU.normalTitle" = "Logga In";
+
+/* Class = "UILabel"; text = "Description text..."; ObjectID = "fTx-sd-ifn"; */
+"fTx-sd-ifn.text" = "Description text...";
+
+/* Class = "UILabel"; text = "By creating an account you agree to our\nTerms of Service and Privacy Policy"; ObjectID = "hMf-y6-2Ls"; */
+"hMf-y6-2Ls.text" = "När du skapar ett konto så\n håller du med om i vår Term och Service";
+
+/* Class = "UILabel"; text = "Choose a username!"; ObjectID = "hiH-Be-lgf"; */
+"hiH-Be-lgf.text" = "Välj en användarnamn!";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "jWB-lx-lfO"; */
+"jWB-lx-lfO.title" = "Profil";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jiL-UN-OMe"; */
+"jiL-UN-OMe.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Have an account? Sign In"; ObjectID = "k1g-sS-ZxQ"; */
+"k1g-sS-ZxQ.normalTitle" = "Redan en konto, logga in!";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "lX9-iG-dLQ"; */
+"lX9-iG-dLQ.text" = "E-post";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "n4V-oP-wtC"; */
+"n4V-oP-wtC.normalTitle" = "Dela";
+
+/* Class = "UILabel"; text = "CRUNCHER"; ObjectID = "nYK-wx-JhQ"; */
+"nYK-wx-JhQ.text" = "CRUNCHER";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "uAz-Xr-OAt"; */
+"uAz-Xr-OAt.normalTitle" = "Registrera";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "w20-lr-OpW"; */
+"w20-lr-OpW.text" = "Användarnamn";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "yum-VN-4Qr"; */
+"yum-VN-4Qr.text" = "Lösenord";
+
+/* Class = "UINavigationItem"; title = "Your Profile"; ObjectID = "zFL-Qo-Hwc"; */
+"zFL-Qo-Hwc.title" = "Din Profil";
+
+/* Class = "UILabel"; text = "Create an account"; ObjectID = "zbV-V4-y2x"; */
+"zbV-V4-y2x.text" = "Skapa en konto";

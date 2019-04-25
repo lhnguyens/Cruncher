@@ -25,20 +25,20 @@ extension Date {
         let seconds = components.second!
         
         if years > 0 {
-            return years == 1 ? "1 year ago" : "\(years) years ago"
+            return years == 1 ? "\(NSLocalizedString("1", comment: ""))" : "\(years)  \(NSLocalizedString("2", comment: ""))"
         } else if months > 0 {
-            return months == 1 ? "1 month ago" : "\(months) months ago"
+            return months == 1 ?  "\(NSLocalizedString("3", comment: "")) " : "\(months) \(NSLocalizedString("4", comment: ""))"
         } else if days >= 7 {
             let weeks = days / 7
-            return weeks == 1 ? "1 week ago" : "\(weeks) weeks ago"
+            return weeks == 1 ? "\(NSLocalizedString("5", comment: ""))" : "\(weeks)  \(NSLocalizedString("6", comment: ""))"
         } else if days > 0 {
-            return days == 1 ? "1 day ago" : "\(days) days ago"
+            return days == 1 ? " \(NSLocalizedString("7", comment: ""))" : "\(days)  \(NSLocalizedString("8", comment: ""))"
         } else if hours > 0 {
-            return hours == 1 ? "1 hour ago" : "\(hours) hours ago"
+            return hours == 1 ? " \(NSLocalizedString("9", comment: ""))" : "\(hours) \(NSLocalizedString("10", comment: ""))"
         } else if minutes > 0 {
-            return minutes == 1 ? "1 minute ago" : "\(minutes) minutes ago"
+            return minutes == 1 ? " \(NSLocalizedString("11", comment: ""))" : "\(minutes)  \(NSLocalizedString("12", comment: ""))"
         } else {
-            return seconds == 1 ? "1 second ago" : "\(seconds) seconds ago"
+            return seconds == 1 ? " \(NSLocalizedString("13", comment: ""))" : "\(seconds)  \(NSLocalizedString("14", comment: ""))"
         }
     }
 

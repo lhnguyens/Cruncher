@@ -80,6 +80,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         let profileURL = data["profileImage"] as? String ?? ""
                         let newPosts = Post(user: user, description: description, likes: likes, imageURL: imageURL, postUserID: postID, date: date, profileImage: profileURL)
                         self.postsData.append(newPosts)
+                        
                     }
                 }
                 self.tableView.reloadData()
@@ -116,6 +117,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableView.automaticDimension
+    }
+
+    
     
     @objc func checkMarkButtonClicked (sender: UIButton) {
         
@@ -127,15 +134,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseInOut, animations: {
                 sender.transform = .identity
             }, completion: nil)
-    
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return UITableView.automaticDimension
-    }
-    
-    
+            
     
 }
 

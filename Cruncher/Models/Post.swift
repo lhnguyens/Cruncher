@@ -33,6 +33,7 @@ class Post {
         self.postUserID = postUserID
         self.createdAt = date //Date(timeIntervalSince1970: timestamp/1000)
         self.profileImage = profileImage
+        
     }
     
     func toAny() -> [String: Any] {

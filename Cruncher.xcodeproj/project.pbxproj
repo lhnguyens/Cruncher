@@ -10,6 +10,7 @@
 		0F05033222538151000D7341 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05033122538151000D7341 /* SetUpProfileViewController.swift */; };
 		0F4ADF592241169300475A5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ADF582241169300475A5A /* UploadViewController.swift */; };
 		0F651B53222EA8FB003D2273 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F651B52222EA8FB003D2273 /* FeedModels.swift */; };
+		0F95497B2271AEFD00B696C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F95497D2271AEFD00B696C9 /* Localizable.strings */; };
 		0F99D6352225BA0100135B00 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6342225BA0100135B00 /* LogInViewController.swift */; };
 		0F99D6372225BA0F00135B00 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6362225BA0F00135B00 /* SignUpViewController.swift */; };
 		0F99D6392225BE4A00135B00 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D6382225BE4A00135B00 /* RoundedView.swift */; };
@@ -40,6 +41,10 @@
 		0F05033122538151000D7341 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetUpProfileViewController.swift; path = "New Group/SetUpProfileViewController.swift"; sourceTree = "<group>"; };
 		0F4ADF582241169300475A5A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0F651B52222EA8FB003D2273 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
+		0F9549772271AE8D00B696C9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		0F9549782271AE8D00B696C9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0F95497C2271AEFD00B696C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0F95497E2271AF0200B696C9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0F99D6342225BA0100135B00 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0F99D6362225BA0F00135B00 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F99D6382225BE4A00135B00 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -176,6 +181,7 @@
 				0FE77BDF22246BAC003ED80E /* LaunchScreen.storyboard */,
 				0FE77BE222246BAC003ED80E /* Info.plist */,
 				0FF66648222DA0930064D276 /* Readme.md */,
+				0F95497D2271AEFD00B696C9 /* Localizable.strings */,
 			);
 			path = Cruncher;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 0FE77BCA22246BAB003ED80E;
 			productRefGroup = 0FE77BD422246BAB003ED80E /* Products */;
@@ -304,6 +311,7 @@
 				0FB1C0CA222E962400C7BBDC /* 32-camera.json in Resources */,
 				0FE77BE122246BAC003ED80E /* LaunchScreen.storyboard in Resources */,
 				0FE77BDE22246BAC003ED80E /* Assets.xcassets in Resources */,
+				0F95497B2271AEFD00B696C9 /* Localizable.strings in Resources */,
 				0FB1C0C4222E94C500C7BBDC /* 4675-a-guakka-loader-for-foodvisor.json in Resources */,
 				0FE77BDC22246BAB003ED80E /* Main.storyboard in Resources */,
 			);
@@ -410,10 +418,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0F95497D2271AEFD00B696C9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F95497C2271AEFD00B696C9 /* en */,
+				0F95497E2271AF0200B696C9 /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0FE77BDA22246BAB003ED80E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0FE77BDB22246BAB003ED80E /* Base */,
+				0F9549772271AE8D00B696C9 /* sv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -422,6 +440,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0FE77BE022246BAC003ED80E /* Base */,
+				0F9549782271AE8D00B696C9 /* sv */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -433,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -494,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
